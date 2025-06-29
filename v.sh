@@ -184,10 +184,11 @@ while true; do
     echo -e "\n🔄 1 - Change only region/version"
     echo -e "🔄 2 - Change device model"
     echo -e "🔄 3 - Open list Links"
-    echo -e "⬇️ 4 -${GREEN}$Show URLs${RESET} (long press to open the menu)"
+    echo -e "❌ 0 - End script"
+    echo -e "🔄   → ${GREEN}$Show URLs${RESET} (long press to open the menu)"
     echo -e "     → More > Select URL"
     echo -e "     → ${PURPLE}Tap to copy the link${RESET}, ${BLUE}long press to open in browser${RESET}"
-    echo -e "❌ 0 - End script"
+    echo -e
     read -p "💡 Select an option (1/2/3/0): " option
     case "$option" in
         1)
