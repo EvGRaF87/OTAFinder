@@ -4,13 +4,13 @@
 # ==         Aвтоматический установщик OTAFindeR           ==
 # ==============================================================================
 
-# Глобально отключаем интерактивные вопросы от установщика пакетов
+# Отключение интерактивных вопросов от установщика пакетов
 export DEBIAN_FRONTEND=noninteractive
 
 # --- НАСТРОЙКИ ---
 B_SH_URL="https://raw.githubusercontent.com/EvGRaF87/OTAFinder/refs/heads/main/oplus.sh"
 
-# Цвета для вывода
+# Colors
 GREEN="\e[32m"
 YELLOW="\e[33m"
 BLUE="\e[34m"
@@ -22,7 +22,7 @@ OTA_DIR="/storage/emulated/0/OTA"
 B_SH_PATH="$OTA_DIR/oplus.sh"
 REALME_OTA_BIN="/data/data/com.termux/files/usr/bin/realme-ota"
 
-# Функция для вывода ошибки и выхода
+# Вывод ошибки
 handle_error() {
     echo -e "\n${RED}ОШИБКА: $1${RESET}"
     echo -e "${YELLOW}Установка прервана.${RESET}"
