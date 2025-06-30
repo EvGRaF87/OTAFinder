@@ -90,9 +90,6 @@ curl -sL "$TXT_SH_URL" -o "$DEVICES_TXT_PATH"
 if [ $? -ne 0 ]; then
     handle_error "Не удалось скачать списка устройств devices.txt! Ошибка сети или проблема с URL: $TXT_SH_URL"
 fi
-if [ ! -f "$TXT_SH_PATH" ] || [ ! -s "$DEVICES_TXT_PATH" ]; then
-    handle_error "Файл devices.txt не был загружен или пуст! Проверьте URL и интернет-соединение."
-fi
 echo -e "${GREEN}Файл devices.txt успешно загружен в $DEVICES_TXT_PATH${RESET}"
 
 # --- Шаг 6: Создание списка устройств devices.txt ---
