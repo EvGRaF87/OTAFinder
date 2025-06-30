@@ -9,7 +9,7 @@ export DEBIAN_FRONTEND=noninteractive
 
 # --- НАСТРОЙКИ ---
 # Исправленные URL-адреса для прямого доступа к файлам на GitHub
-B_SH_URL="https://raw.githubusercontent.com/EvGRaF87/OTAFinder/refs/heads/main/v.sh"
+B_SH_URL="https://raw.githubusercontent.com/EvGRaF87/OTAFinder/refs/heads/main/oplus.sh"
 # --- КОНЕЦ НАСТРОЕК ---
 
 # Цвета для красивого вывода
@@ -21,7 +21,7 @@ RESET="\e[0m"
 
 # Пути
 OTA_DIR="/storage/emulated/0/OTA"
-B_SH_PATH="$OTA_DIR/v.sh"
+B_SH_PATH="$OTA_DIR/oplus.sh"
 REALME_OTA_BIN="/data/data/com.termux/files/usr/bin/realme-ota"
 
 # Функция для вывода ошибки и выхода
@@ -69,17 +69,17 @@ else
 fi
 echo -e "${GREEN}Python-модули успешно установлены и настроены.${RESET}"
 
-# --- Шаг 4: Загрузка основного скрипта v.sh ---
-echo -e "\n${GREEN}>>> Шаг 4: Загрузка основного скрипта (v.sh)...${RESET}"
+# --- Шаг 4: Загрузка основного скрипта oplus.sh ---
+echo -e "\n${GREEN}>>> Шаг 4: Загрузка основного скрипта (oplus.sh)...${RESET}"
 curl -sL "$B_SH_URL" -o "$B_SH_PATH"
 # Добавляем проверку статуса выхода curl
 if [ $? -ne 0 ]; then
-    handle_error "Не удалось скачать скрипт v.sh! Ошибка сети или проблема с URL: $B_SH_URL"
+    handle_error "Не удалось скачать скрипт oplus.sh! Ошибка сети или проблема с URL: $B_SH_URL"
 fi
 if [ ! -f "$B_SH_PATH" ] || [ ! -s "$B_SH_PATH" ]; then
-    handle_error "Файл v.sh не был загружен или пуст! Проверьте URL и интернет-соединение."
+    handle_error "Файл oplus.sh не был загружен или пуст! Проверьте URL и интернет-соединение."
 fi
-echo -e "${GREEN}Скрипт v.sh успешно загружен в $B_SH_PATH${RESET}"
+echo -e "${GREEN}Скрипт oplus.sh успешно загружен в $B_SH_PATH${RESET}"
 
 # --- Шаг 5: Создание списка устройств devices.txt ---
 echo -e "\n${GREEN}>>> Шаг 5: Автоматическое создание списка устройств devices.txt...${RESET}"
