@@ -36,7 +36,7 @@ handle_error() {
 # --- НАЧАЛО СКРИПТА ---
 clear
 echo -e "${BLUE}=====================================================${RESET}"
-echo -e "${BLUE}==        Автоматический установщик для Realme OTA     ==${RESET}"
+echo -e "${BLUE}==    Автоматический установщик для Realme OTA     ==${RESET}"
 echo -e "${BLUE}=====================================================${RESET}"
 echo ""
 echo -e "${YELLOW}Этот скрипт автоматически скачает и настроит всё необходимое.${RESET}"
@@ -101,26 +101,26 @@ chmod 700 -R "$TXT_DIR"
 
 echo -e "${BLUE}Создаем файл : $TXT_FILE...${RESET}"
 {
-OnePlus 13 IN|CPH2649IN|1B|A
-OnePlus 13 EU|CPH2653EEA|44|A
-OnePlus 13 ROW|CPH2653|A7|A
-OnePlus 13 CN|PJZ110|97|A
-OnePlus Ace5|PKG110|97|A
-OnePlus 13R IN|CPH2691IN|1B|A
-OnePlus 13R EU|CPH2645EEA|44|A
-OnePlus 13R ROW|CPH2645|A7|A
-OnePlus 13s|CPH2723IN|1B|A
-OnePlus 13T|PKX110|97|A
-OnePlus 12 IN|CPH2573IN|1B|C
-OnePlus 12 EU|CPH2581EEA|44|C
-OnePlus 12 ROW|CPH2581|A7|C
-OnePlus 12 CN|PJD110|97|C
-OnePlus Ace3|PJE110|97|C
-OnePlus 12R IN|CPH2585IN|1B|C
-OnePlus 12R EU|CPH2609EEA|44|C
-OnePlus 12R ROW|CPH2609|A7|C
-OPPO Find N5 APC|CPH2671|A4|A
-OPPO Find N5 SG|CPH2671|2C|A
+echo "OnePlus 13 IN|CPH2649IN|1B|A"
+echo "OnePlus 13 EU|CPH2653EEA|44|A"
+echo "OnePlus 13 ROW|CPH2653|A7|A"
+echo "OnePlus 13 CN|PJZ110|97|A"
+echo "OnePlus Ace5|PKG110|97|A"
+echo "OnePlus 13R IN|CPH2691IN|1B|A"
+echo "OnePlus 13R EU|CPH2645EEA|44|A"
+echo "OnePlus 13R ROW|CPH2645|A7|A"
+echo "OnePlus 13s|CPH2723IN|1B|A"
+echo "OnePlus 13T|PKX110|97|A"
+echo "OnePlus 12 IN|CPH2573IN|1B|C"
+echo "OnePlus 12 EU|CPH2581EEA|44|C"
+echo "OnePlus 12 ROW|CPH2581|A7|C"
+echo "OnePlus 12 CN|PJD110|97|C"
+echo "OnePlus Ace3|PJE110|97|C"
+echo "OnePlus 12R IN|CPH2585IN|1B|C"
+echo "OnePlus 12R EU|CPH2609EEA|44|C"
+echo "OnePlus 12R ROW|CPH2609|A7|C"
+echo "OPPO Find N5 APC|CPH2671|A4|A"
+echo "OPPO Find N5 SG|CPH2671|2C|A"
 } > "$TXT_FILE"
 
 chmod +x "$TXT_FILE"
