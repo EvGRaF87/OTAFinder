@@ -101,7 +101,7 @@ chmod 700 -R "$TXT_DIR"
 
 echo -e "${BLUE}Создаем файл : $TXT_FILE...${RESET}"
 
-    cat "$TXT_SH_PATH" > "$TXT_FILE"
+    cat "$TXT_SH_PATH"  "$TXT_FILE"
 
 chmod +x "$TXT_FILE"
 echo -e "${GREEN}Файл 'devices.txt' успешно создан!${RESET}"
