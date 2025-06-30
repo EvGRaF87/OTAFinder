@@ -102,13 +102,13 @@ chmod 700 -R "$TXT_DIR"
 echo -e "${BLUE}Создаем файл : $TXT_FILE...${RESET}"
 {
     cat $TXT_SH_PATH"
-} "$TXT_FILE"
+} > "$TXT_FILE"
 
 chmod +x "$TXT_FILE"
 echo -e "${GREEN}Файл 'devices.txt' успешно создан!${RESET}"
 
 # --- Шаг 7: Создание ярлыка для виджета ---
-echo -e "${GREEN}>>> Шаг 6: Автоматическое создание ярлыка...${RESET}"
+echo -e "\n${GREEN}>>> Шаг 6: Автоматическое создание ярлыка...${RESET}"
 SHORTCUT_DIR="$HOME/.shortcuts"
 SHORTCUT_FILE="$SHORTCUT_DIR/OTAFindeR"
 
