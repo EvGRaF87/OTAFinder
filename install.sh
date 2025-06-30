@@ -9,7 +9,7 @@ export DEBIAN_FRONTEND=noninteractive
 
 # --- НАСТРОЙКИ ---
 # Исправленные URL-адреса для прямого доступа к файлам на GitHub
-B_SH_URL="https://github.com/EvGRaF87/OTAFinder/blob/b4f09491c13bf058a94e177a408487c83e21e4b6/v.sh"
+B_SH_URL="https://raw.githubusercontent.com/EvGRaF87/OTAFinder/refs/heads/main/v.sh"
 # --- КОНЕЦ НАСТРОЕК ---
 
 # Цвета для красивого вывода
