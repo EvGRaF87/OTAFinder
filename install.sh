@@ -10,7 +10,6 @@ export DEBIAN_FRONTEND=noninteractive
 # --- НАСТРОЙКИ ---
 # Исправленные URL-адреса для прямого доступа к файлам на GitHub
 B_SH_URL="https://raw.githubusercontent.com/EvGRaF87/OTAFinder/refs/heads/main/v.sh"
-TXT_SH_URL="https://raw.githubusercontent.com/EvGRaF87/OTAFinder/refs/heads/main/devices.txt"
 # --- КОНЕЦ НАСТРОЕК ---
 
 # Цвета для красивого вывода
@@ -23,7 +22,6 @@ RESET="\e[0m"
 # Пути
 OTA_DIR="/storage/emulated/0/OTA"
 B_SH_PATH="$OTA_DIR/v.sh"
-DEVICES_TXT_PATH="$OTA_DIR/devices.txt" # Путь к файлу в домашней директории
 REALME_OTA_BIN="/data/data/com.termux/files/usr/bin/realme-ota"
 
 # Функция для вывода ошибки и выхода
@@ -83,17 +81,8 @@ if [ ! -f "$B_SH_PATH" ] || [ ! -s "$B_SH_PATH" ]; then
 fi
 echo -e "${GREEN}Скрипт v.sh успешно загружен в $B_SH_PATH${RESET}"
 
-# --- Шаг 5: Загрузка списка устройств devices.txt ---
-echo -e "\n${GREEN}>>> Шаг 4: Загрузка списка устройств (devices.txt)...${RESET}"
-curl -sL "$TXT_SH_URL" -o "$DEVICES_TXT_PATH"
-# Добавляем проверку статуса выхода curl
-if [ $? -ne 0 ]; then
-    handle_error "Не удалось скачать списка устройств devices.txt! Ошибка сети или проблема с URL: $TXT_SH_URL"
-fi
-echo -e "${GREEN}Файл devices.txt успешно загружен в $DEVICES_TXT_PATH${RESET}"
-
-# --- Шаг 6: Создание списка устройств devices.txt ---
-echo -e "\n${GREEN}>>> Шаг 6: Автоматическое создание списка устройств devices.txt...${RESET}"
+# --- Шаг 5: Создание списка устройств devices.txt ---
+echo -e "\n${GREEN}>>> Шаг 5: Автоматическое создание списка устройств devices.txt...${RESET}"
 TXT_DIR="$HOME/"
 TXT_FILE="$TXT_DIR/devices.txt"
 
@@ -126,7 +115,7 @@ echo "OPPO Find N5 SG|CPH2671|2C|A"
 chmod +x "$TXT_FILE"
 echo -e "${GREEN}Файл 'devices.txt' успешно создан!${RESET}"
 
-# --- Шаг 7: Создание ярлыка для виджета ---
+# --- Шаг 6: Создание ярлыка для виджета ---
 echo -e "\n${GREEN}>>> Шаг 6: Автоматическое создание ярлыка...${RESET}"
 SHORTCUT_DIR="$HOME/.shortcuts"
 SHORTCUT_FILE="$SHORTCUT_DIR/OTAFindeR"
@@ -146,7 +135,7 @@ echo -e "${GREEN}Ярлык 'OTAFindeR' успешно создан!${RESET}"
 # --- ЗАВЕРШЕНИЕ ---
 clear
 echo -e "${GREEN}=============================================${RESET}"
-echo -e "${GREEN}      🎉 Установка успешно завершена! 🎉      ${RESET}"
+echo -e "${GREEN}    🎉 Установка успешно завершена! 🎉      ${RESET}"
 echo -e "${GREEN}=============================================${RESET}"
 echo ""
 echo -e "${YELLOW}Что делать дальше:${RESET}"
