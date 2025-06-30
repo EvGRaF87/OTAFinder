@@ -132,7 +132,7 @@ if [[ "$choice" == "4" ]]; then
 echo -e "${GREEN}=============================================================${RESET}"
     printf "| %-2s| %-20s | %-14s | %-6s | %-3s |\n" "No." "Device" "Model" "Manif" "OTA"
     echo -e "+----+----------------------+----------------+--------+-----+"
-    mapfile -t devices < <(grep -v '^\s*$' real.txt)
+    mapfile -t devices < <(grep -v '^\s*$' realme.txt)
     for i in "${!devices[@]}"; do
         IFS='|' read -r d m r v <<< "${devices[$i]}"
         printf "| ${YELLOW}%-2d${RESET} | %-20s | %-14s | %-6s | %-3s |\n" $((i+1)) "$d" "$m" "$r" "$v"
