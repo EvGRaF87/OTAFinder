@@ -9,7 +9,7 @@ export DEBIAN_FRONTEND=noninteractive
 
 # --- НАСТРОЙКИ ---
 # Исправленные URL-адреса для прямого доступа к файлам на GitHub
-B_SH_URL="https://raw.githubusercontent.com/EvGRaF87/OTAFinder/refs/heads/main/oplus.sh"
+B_SH_URL="https://raw.githubusercontent.com/EvGRaF87/OTAFinder/refs/heads/main/real.sh"
 # --- КОНЕЦ НАСТРОЕК ---
 
 # Цвета для красивого вывода
@@ -21,7 +21,7 @@ RESET="\e[0m"
 
 # Пути
 OTA_DIR="/storage/emulated/0/OTA"
-B_SH_PATH="$OTA_DIR/oplus.sh"
+B_SH_PATH="$OTA_DIR/real.sh"
 REALME_OTA_BIN="/data/data/com.termux/files/usr/bin/realme-ota"
 
 # Функция для вывода ошибки и выхода
@@ -69,56 +69,56 @@ else
 fi
 echo -e "${GREEN}Python-модули успешно установлены и настроены.${RESET}"
 
-# --- Шаг 4: Загрузка основного скрипта oplus.sh ---
-echo -e "\n${GREEN}>>> Шаг 4: Загрузка основного скрипта (oplus.sh)...${RESET}"
+# --- Шаг 4: Загрузка основного скрипта real.sh ---
+echo -e "\n${GREEN}>>> Шаг 4: Загрузка основного скрипта (real.sh)...${RESET}"
 curl -sL "$B_SH_URL" -o "$B_SH_PATH"
 # Добавляем проверку статуса выхода curl
 if [ $? -ne 0 ]; then
-    handle_error "Не удалось скачать скрипт oplus.sh! Ошибка сети или проблема с URL: $B_SH_URL"
+    handle_error "Не удалось скачать скрипт real.sh! Ошибка сети или проблема с URL: $B_SH_URL"
 fi
 if [ ! -f "$B_SH_PATH" ] || [ ! -s "$B_SH_PATH" ]; then
-    handle_error "Файл oplus.sh не был загружен или пуст! Проверьте URL и интернет-соединение."
+    handle_error "Файл real.sh не был загружен или пуст! Проверьте URL и интернет-соединение."
 fi
-echo -e "${GREEN}Скрипт oplus.sh успешно загружен в $B_SH_PATH${RESET}"
+echo -e "${GREEN}Скрипт real.sh успешно загружен в $B_SH_PATH${RESET}"
 
-# --- Шаг 5: Создание списка устройств devices.txt ---
-echo -e "\n${GREEN}>>> Шаг 5: Автоматическое создание списка устройств devices.txt...${RESET}"
+# --- Шаг 5: Создание списка устройств realme.txt ---
+echo -e "\n${GREEN}>>> Шаг 5: Автоматическое создание списка устройств realme.txt...${RESET}"
 TXT_DIR="$HOME/"
-TXT_FILE="$TXT_DIR/devices.txt"
+TXT_FILE="$TXT_DIR/realme.txt"
 
 chmod 700 -R "$TXT_DIR"
 
 echo -e "${BLUE}Создаем файл : $TXT_FILE...${RESET}"
 {
-echo "OnePlus 13 IN|CPH2649IN|1B|A"
-echo "OnePlus 13 EU|CPH2653EEA|44|A"
-echo "OnePlus 13 ROW|CPH2653|A7|A"
-echo "OnePlus 13 CN|PJZ110|97|A"
-echo "OnePlus Ace5|PKG110|97|A"
-echo "OnePlus 13R IN|CPH2691IN|1B|A"
-echo "OnePlus 13R EU|CPH2645EEA|44|A"
-echo "OnePlus 13R ROW|CPH2645|A7|A"
-echo "OnePlus 13s|CPH2723IN|1B|A"
-echo "OnePlus 13T|PKX110|97|A"
-echo "OnePlus 12 IN|CPH2573IN|1B|C"
-echo "OnePlus 12 EU|CPH2581EEA|44|C"
-echo "OnePlus 12 ROW|CPH2581|A7|C"
-echo "OnePlus 12 CN|PJD110|97|C"
-echo "OnePlus Ace3|PJE110|97|C"
-echo "OnePlus 12R IN|CPH2585IN|1B|C"
-echo "OnePlus 12R EU|CPH2609EEA|44|C"
-echo "OnePlus 12R ROW|CPH2609|A7|C"
-echo "OPPO Find N5 APC|CPH2671|A4|A"
-echo "OPPO Find N5 SG|CPH2671|2C|A"
+echo "Realme GTNeo6|RMX3852|97|C"
+echo "Realme GTNeo6SE|RMX3850|97|C"
+echo "Realme GT6|RMX3851IN|1B|C"
+echo "Realme GT6T|RMX3853IN|1B|C"
+echo "Realme GT6|RMX3851EEA|44|C"
+echo "Realme GT6T|RMX3853EEA|44|C"
+echo "Realme GT6|RMX3851RU|37|C"
+echo "Realme GT6T|RMX3853RU|37|C"
+echo "Realme GT7Pro RE|RMX5090|97|A"
+echo "Realme GT7Pro|RMX5010|97|A"
+echo "Realme GT7Pro|RMX5011IN|1B|A"
+echo "Realme GT7Pro|RMX5011EEA|44|A"
+echo "Realme GT7Pro|RMX5011RU|37|A"
+echo "Realme GT5Pro|RMX3888|97|C"
+echo "Realme GT6CN|RMX3800|97|C"
+echo "Realme GTNeo5 150W|RMX3706|97|F"
+echo "Realme GTNeo5 240W|RMX3708|97|F"
+echo "Realme GTNeo5SE|RMX3700|97|F"
+echo "Realme GT3 RU|RMX3709RU|37|F"
+echo "Realme GTNeo5SE|RMX3701|A6|F"
 } > "$TXT_FILE"
 
 chmod +x "$TXT_FILE"
-echo -e "${GREEN}Файл 'devices.txt' успешно создан!${RESET}"
+echo -e "${GREEN}Файл 'realme.txt' успешно создан!${RESET}"
 
 # --- Шаг 6: Создание ярлыка для виджета ---
 echo -e "\n${GREEN}>>> Шаг 6: Автоматическое создание ярлыка...${RESET}"
 SHORTCUT_DIR="$HOME/.shortcuts"
-SHORTCUT_FILE="$SHORTCUT_DIR/OTAFindeR"
+SHORTCUT_FILE="$SHORTCUT_DIR/FindeReal"
 
 mkdir -p "$SHORTCUT_DIR"
 chmod 700 -R "$SHORTCUT_DIR"
@@ -130,7 +130,7 @@ echo -e "${BLUE}Создаем файл ярлыка: $SHORTCUT_FILE...${RESET}"
 } > "$SHORTCUT_FILE"
 
 chmod +x "$SHORTCUT_FILE"
-echo -e "${GREEN}Ярлык 'OTAFindeR' успешно создан!${RESET}"
+echo -e "${GREEN}Ярлык 'FindeReal' успешно создан!${RESET}"
 
 # --- ЗАВЕРШЕНИЕ ---
 clear
@@ -142,7 +142,7 @@ echo -e "${YELLOW}Что делать дальше:${RESET}"
 echo "1. Полностью закройте приложение Termux (командой 'exit' или через меню)."
 echo "2. Перейдите на главный экран вашего телефона."
 echo "3. Добавьте виджет 'Termux'."
-echo "4. В списке доступных ярлыков должен появиться 'OTAFindeR'."
+echo "4. В списке доступных ярлыков должен появиться 'FindeReal'."
 echo "5. Нажмите на него, чтобы запустить скрипт поиска обновлений."
 echo ""
 echo -e "${BLUE}С Вами был SeRViP!${RESET}"
