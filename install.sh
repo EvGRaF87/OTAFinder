@@ -123,6 +123,9 @@ echo -e "${BLUE}Создаем файл : $TXT_FILE...${RESET}"
   cat "$TXT_SH_PATH"
 } > "$TXT_FILE"
 
+chmod +x "$TXT_FILE"
+echo -e "${GREEN}Файл 'devices.txt' успешно создан!${RESET}"
+
 # --- Шаг 6: Создание ярлыка для виджета ---
 echo -e "\n${GREEN}>>> Шаг 6: Создание ярлыка...${RESET}"
 SHORTCUT_DIR="$HOME/.shortcuts"
