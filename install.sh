@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# ==============================================================================
-# ==         Aвтоматический установщик OTAFindeR           ==
-# ==============================================================================
-
-# Отключение интерактивных вопросов от установщика пакетов
 export DEBIAN_FRONTEND=noninteractive
 
 # --- НАСТРОЙКИ ---
@@ -18,7 +13,7 @@ RED="\e[31m"
 RESET="\e[0m"
 
 # Пути
-OTA_DIR="/storage/emulated/0/OTA"
+OTA_DIR="$HOME/OTA"
 B_SH_PATH="$OTA_DIR/oplus.sh"
 REALME_OTA_BIN="/data/data/com.termux/files/usr/bin/realme-ota"
 
@@ -69,10 +64,23 @@ echo -e "${GREEN}Python-модули успешно установлены и н
 
 # --- Шаг 4: Загрузка скрипта oplus.sh ---
 echo -e "\n${GREEN}>>> Шаг 4: Загрузка скрипта (oplus.sh)...${RESET}"
+
+if [ ! -d "$OTA_DIR" ]; then
+  mkdir -p "$OTA_DIR"
+  if [ $? -eq 0 ]; then
+    echo "Создана '$OTA_DIR' папка."
+  else
+    echo "Ошибка при создании папки '$OTA_DIR'."
+    exit 1
+  fi
+else
+  echo "Папка '$OTA_DIR' уже существует."
+fi
+
 curl -sL "$B_SH_URL" -o "$B_SH_PATH"
-# Добавляем проверку статуса выхода curl
+
 if [ $? -ne 0 ]; then
-    handle_error "Не удалось скачать скрипт oplus.sh! Ошибка сети или проблема с URL: $B_SH_URL"
+    handle_error "Не удалось скачать скрипт oplus.sh!"
 fi
 if [ ! -f "$B_SH_PATH" ] || [ ! -s "$B_SH_PATH" ]; then
     handle_error "Файл oplus.sh не был загружен или пуст! Проверьте URL и интернет-соединение."
