@@ -89,14 +89,18 @@ done
         echo -e "❌ Download URL not found."
     fi
 
-    echo "OTA Version & URL:" >> "Ota_${device_model}.txt"
-    echo "" >> "Ota_${device_model}.txt"
-    echo "$ota_version_full" >> "Ota_${device_model}.txt"
-    echo "$modified_link" >> "Ota_${device_model}.txt"
-    echo "" >> "Ota_${device_model}.txt"
+    echo "OTA Version & URL:" >> "OTA_${device_model}.txt"
+    echo "" >> "OTA_${device_model}.txt"
+    echo "$ota_version_full" >> "OTA_${device_model}.txt"
+    echo "$real_version_name" >> "OTA_${device_model}.txt"
+    echo "$modified_link" >> "OTA_${device_model}.txt"
+    echo "" >> "OTA_${device_model}.txt"
 
-    [[ ! -f Ota_links.csv ]] && echo "OTA Version & URL:" > Ota_links.csv
-    grep -qF "$modified_link" Ota_links.csv || echo "$ota_version_full, $modified_link" >> Ota_links.csv
+    [[ ! -f OTA_links.csv ]] && echo "OTA Version & URL:" > OTA_links.csv
+    grep -qF "$modified_link" OTA_links.csv || echo ""
+echo "$ota_version_full" >> OTA_links.csv
+echo "$real_version_name" >> OTA_links.csv
+echo "$modified_link" >> OTA_links.csv
 }
 
 # 📌 Výpis regiónov
