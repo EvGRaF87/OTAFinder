@@ -4,7 +4,6 @@ export DEBIAN_FRONTEND=noninteractive
 
 # --- НАСТРОЙКИ ---
 B_SH_URL="https://raw.githubusercontent.com/EvGRaF87/OTAFinder/refs/heads/main/oplus.sh"
-TXT_SH_URL="https://raw.githubusercontent.com/EvGRaF87/OTAFinder/refs/heads/main/oneplus.txt"
 
 # Colors
 GREEN="\e[32m"
@@ -16,7 +15,6 @@ RESET="\e[0m"
 # Пути
 OTA_DIR="$HOME/OTA"
 B_SH_PATH="$OTA_DIR/oplus.sh"
-TXT_SH_PATH="$OTA_DIR/oneplus.txt"
 REALME_OTA_BIN="/data/data/com.termux/files/usr/bin/realme-ota"
 
 # Вывод ошибки
@@ -96,35 +94,12 @@ TXT_FILE="$TXT_DIR/devices.txt"
 
 chmod 700 -R "$TXT_DIR"
 
-if [ ! -d "$OTA_DIR" ]; then
-  mkdir -p "$OTA_DIR"
-  if [ $? -eq 0 ]; then
-    echo "Создана '$OTA_DIR' папка."
-  else
-    echo "Ошибка при создании папки '$OTA_DIR'."
-    exit 1
-  fi
-else
-  echo "Папка '$OTA_DIR' уже существует."
-fi
-
-curl -sL "$TXT_SH_URL" -o "$TXT_SH_PATH"
-
-if [ $? -ne 0 ]; then
-    handle_error "Не удалось скачать файл oneplus.txt!"
-fi
-if [ ! -f "$TXT_SH_PATH" ] || [ ! -s "$TXT_SH_PATH" ]; then
-    handle_error "Файл oneplus.txt не был загружен или пуст!"
-fi
-echo -e "${GREEN}Файл oneplus.txt успешно загружен в $B_SH_PATH${RESET}"
-
 echo -e "${BLUE}Создаем файл : $TXT_FILE...${RESET}"
 {
-  cat "$TXT_SH_PATH"
+  
 } > "$TXT_FILE"
 
 chmod +x "$TXT_FILE"
-chmod 644 "$TXT_FILE"
 echo -e "${GREEN}Файл 'devices.txt' успешно создан!${RESET}"
 
 # --- Шаг 6: Создание ярлыка для виджета ---
