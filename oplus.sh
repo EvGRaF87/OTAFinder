@@ -89,12 +89,14 @@ done
         echo -e "❌ Download URL not found."
     fi
 
-    echo "$ota_version_full" >> "ota_${device_model}.txt"
-    echo "$modified_link" >> "ota_${device_model}.txt"
-    echo "" >> "ota_${device_model}.txt"
+    echo "OTA Version & URL:" >> "Ota_${device_model}.txt"
+    echo "" >> "Ota_${device_model}.txt"
+    echo "$ota_version_full" >> "Ota_${device_model}.txt"
+    echo "$modified_link" >> "Ota_${device_model}.txt"
+    echo "" >> "Ota_${device_model}.txt"
 
-    [[ ! -f Ota_links.csv ]] && echo "OTA version & URL" > Ota_links.csv
-    grep -qF "$modified_link" Ota_links.csv || echo "$ota_version_full,$modified_link" >> Ota_links.csv
+    [[ ! -f Ota_links.csv ]] && echo "OTA Version & URL:" > Ota_links.csv
+    grep -qF "$modified_link" Ota_links.csv || echo "$ota_version_full, $modified_link" >> Ota_links.csv
 }
 
 # 📌 Výpis regiónov
@@ -128,7 +130,7 @@ echo -e
 read -p "💡 Select an option (1/2/3/4): " choice
 
 if [[ "$choice" == "4" ]]; then
-    echo -e "\n📱 ${PURPLE}Selected device list :${RESET}"
+    echo -e "\n📱 ${PURPLE}Selected device from list :${RESET}"
 echo -e "${GREEN}=============================================================${RESET}"
     printf "| %-2s| %-20s | %-14s | %-6s | %-3s |\n" "No." "Device" "Model" "Manif" "OTA"
     echo -e "+----+----------------------+----------------+--------+-----+"
@@ -150,7 +152,7 @@ else
     elif [[ "$choice" == "2" ]]; then
         COLOR=$GREEN; prefix="RMX"
     elif [[ "$choice" == "3" ]]; then
-        read -p "🧩 Enter your custom prefix (e.g. XYZ): " prefix
+        read -p "🧩 Enter your prefix (e.g. XYZ): " prefix
         if [[ -z "$prefix" ]]; then
             echo "❌ Prefix cannot be empty."; exit 1
         fi
@@ -183,13 +185,12 @@ run_ota
 while true; do
     echo -e "\n🔄 1 - Change only region/version"
     echo -e "🔄 2 - Change device model"
-    echo -e "🔄 3 - Open list Links"
     echo -e "❌ 0 - End script"
-    echo -e "⬇️   -${GREEN}$Show URLs${RESET} (long press to open the menu)"
+    echo -e "⬇️    -${GREEN}$Show URLs${RESET} (long press to open the menu)"
     echo -e "     → More > Select URL"
     echo -e "     → ${PURPLE}Tap to copy the link${RESET}, ${BLUE}long press to open in browser${RESET}"
     echo -e 
-    read -p "💡 Select an option (1/2/3/0): " option
+    read -p "💡 Select an option (1/2/0): " option
     case "$option" in
         1)
             read -p "📌 Manifest + OTA version : " input
@@ -203,10 +204,6 @@ while true; do
             ;;
         2)
             bash "$0"  # reštart skriptu
-            ;;
-        3)
-            cat Ota_links.csv   #open list links
-            exit 0
             ;;
         0)
             echo -e "👋 Goodbye."
