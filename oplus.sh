@@ -97,7 +97,8 @@ done
     echo "" >> "OTA_${device_model}.txt"
 
     [[ ! -f OTA_links.csv ]] && echo "OTA Version & URL:" > OTA_links.csv
-    grep -qF "$modified_link" OTA_links.csv || echo ""
+    grep -qF "$modified_link" OTA_links.csv || 
+echo ""
 echo "$ota_version_full" >> OTA_links.csv
 echo "$real_version_name" >> OTA_links.csv
 echo "$modified_link" >> OTA_links.csv
