@@ -124,7 +124,7 @@ echo -e "${BLUE}Создаем файл : $TXT_FILE...${RESET}"
 } > "$TXT_FILE"
 
 chmod +x "$TXT_FILE"
-chmod 644 -R "$TXT_FILE"
+chmod 700 "$TXT_FILE"
 echo -e "${GREEN}Файл 'devices.txt' успешно создан!${RESET}"
 
 # --- Шаг 6: Создание ярлыка для виджета ---
