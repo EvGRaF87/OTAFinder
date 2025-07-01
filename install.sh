@@ -4,6 +4,7 @@ export DEBIAN_FRONTEND=noninteractive
 
 # --- НАСТРОЙКИ ---
 B_SH_URL="https://raw.githubusercontent.com/EvGRaF87/OTAFinder/refs/heads/main/oplus.sh"
+TXT_SH_URL="https://raw.githubusercontent.com/EvGRaF87/OTAFinder/refs/heads/main/oneplus.txt"
 
 # Colors
 GREEN="\e[32m"
@@ -15,6 +16,7 @@ RESET="\e[0m"
 # Пути
 OTA_DIR="$HOME/OTA"
 B_SH_PATH="$OTA_DIR/oplus.sh"
+TXT_SH_PATH="$OTA_DIR/oneplus.txt"
 REALME_OTA_BIN="/data/data/com.termux/files/usr/bin/realme-ota"
 
 # Вывод ошибки
@@ -94,32 +96,27 @@ TXT_FILE="$TXT_DIR/devices.txt"
 
 chmod 700 -R "$TXT_DIR"
 
-echo -e "${BLUE}Создаем файл : $TXT_FILE...${RESET}"
-{
-echo "OnePlus 13 IN|CPH2649IN|1B|A"
-echo "OnePlus 13 EU|CPH2653EEA|44|A"
-echo "OnePlus 13 ROW|CPH2653|A7|A"
-echo "OnePlus 13 CN|PJZ110|97|A"
-echo "OnePlus Ace5|PKG110|97|A"
-echo "OnePlus 13R IN|CPH2691IN|1B|A"
-echo "OnePlus 13R EU|CPH2645EEA|44|A"
-echo "OnePlus 13R ROW|CPH2645|A7|A"
-echo "OnePlus 13s|CPH2723IN|1B|A"
-echo "OnePlus 13T|PKX110|97|A"
-echo "OnePlus 12 IN|CPH2573IN|1B|C"
-echo "OnePlus 12 EU|CPH2581EEA|44|C"
-echo "OnePlus 12 ROW|CPH2581|A7|C"
-echo "OnePlus 12 CN|PJD110|97|C"
-echo "OnePlus Ace3|PJE110|97|C"
-echo "OnePlus 12R IN|CPH2585IN|1B|C"
-echo "OnePlus 12R EU|CPH2609EEA|44|C"
-echo "OnePlus 12R ROW|CPH2609|A7|C"
-echo "OPPO Find N5 APC|CPH2671|A4|A"
-echo "OPPO Find N5 SG|CPH2671|2C|A"
-} > "$TXT_FILE"
+if [ ! -d "$OTA_DIR" ]; then
+  mkdir -p "$OTA_DIR"
+  if [ $? -eq 0 ]; then
+    echo "Создана '$OTA_DIR' папка."
+  else
+    echo "Ошибка при создании папки '$OTA_DIR'."
+    exit 1
+  fi
+else
+  echo "Папка '$OTA_DIR' уже существует."
+fi
 
-chmod +x "$TXT_FILE"
-echo -e "${GREEN}Файл 'devices.txt' успешно создан!${RESET}"
+curl -sL "$TXT_SH_URL" -o "$TXT_SH_PATH"
+
+if [ $? -ne 0 ]; then
+    handle_error "Не удалось скачать файл oneplus.txt!"
+fi
+if [ ! -f "$TXT_SH_PATH" ] || [ ! -s "$TXT_SH_PATH" ]; then
+    handle_error "Файл oneplus.txt не был загружен или пуст!"
+fi
+echo -e "${GREEN}Файл oneplus.txt успешно загружен в $B_SH_PATH${RESET}"
 
 # --- Шаг 6: Создание ярлыка для виджета ---
 echo -e "\n${GREEN}>>> Шаг 6: Создание ярлыка...${RESET}"
