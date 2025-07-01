@@ -118,6 +118,11 @@ if [ ! -f "$TXT_SH_PATH" ] || [ ! -s "$TXT_SH_PATH" ]; then
 fi
 echo -e "${GREEN}Файл oneplus.txt успешно загружен в $B_SH_PATH${RESET}"
 
+echo -e "${BLUE}Создаем файл : $TXT_FILE...${RESET}"
+{
+  cat "$TXT_SH_PATH"
+} > "$TXT_FILE"
+
 # --- Шаг 6: Создание ярлыка для виджета ---
 echo -e "\n${GREEN}>>> Шаг 6: Создание ярлыка...${RESET}"
 SHORTCUT_DIR="$HOME/.shortcuts"
