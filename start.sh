@@ -132,9 +132,9 @@ chmod 700 -R "$SHORTCUT_DIR"
 
 echo -e "${BLUE}Создаем файл ярлыка: $SHORTCUT_FILE...${RESET}"
 {
-    echo "#!/bin/bash"
-    echo "bash $B_SH_PATH"
-} > "$SHORTCUT_FILE"
+    cp "$B_SH_PATH"
+} "$SHORTCUT_FILE"
+
 
 chmod +x "$SHORTCUT_FILE"
 echo -e "${GREEN}Ярлык 'FindeReal' успешно создан!${RESET}"
