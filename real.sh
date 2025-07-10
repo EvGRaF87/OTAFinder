@@ -54,12 +54,11 @@ done
     ota_command="realme-ota $server $device_model ${ota_model}_11.${version}.01_0001_100001010000 6 $nv_id"
     echo -e "🔍 Running: ${BLUE}$ota_command${RESET}"
     output=$(eval "$ota_command")
-
+    
     real_ota_version=$(echo "$output" | grep -o '"realOtaVersion": *"[^"]*"' | cut -d '"' -f4)
     real_version_name=$(echo "$output" | grep -o '"realVersionName": *"[^"]*"' | cut -d '"' -f4)
     ota_f_version=$(echo "$real_ota_version" | grep -oE '_11\.[A-Z]\.[0-9]+' | sed 's/_11\.//')
     ota_date=$(echo "$real_ota_version" | grep -oE '_[0-9]{12}$' | tr -d '_')
-    ota_version_full="${ota_model}_11.${ota_f_version}_${region_code}_${ota_date}"
 	os_version=$(echo "$output" | grep -o '"realOsVersion": *"[^"]*"' | cut -d '"' -f4)
     security_os=$(echo "$output" | grep -o '"securityPatchVendor": *"[^"]*"' | cut -d '"' -f4)
     android_version=$(echo "$output" | grep -o '"androidVersion": *"[^"]*"' | cut -d '"' -f4)
@@ -69,22 +68,42 @@ done
 # Získať VersionTypeId
     version_type_id=$(echo "$output" | grep -oP '"versionTypeId"\s*:\s*"\K[^"]+')
 
+# Device_name    
+file="phone_names.txt"
+
+result=$(grep "^$ota_model|" "$file" | head -n 1)
+
+phone_name=${result#*|}
+
 # Výpis
-   echo -e "ℹ️   OTA version: ${YELLOW}$real_ota_version${RESET}"
-   echo -e "ℹ️   Version Firmware: ${PURPLE}$real_version_name${RESET}"
-   echo -e "ℹ️   Android Version: ${YELLOW}$android_version${RESET}"
-   echo -e "ℹ️   OS Version: ${YELLOW}$os_version${RESET}"
-   echo -e "ℹ️   Security Patch: ${YELLOW}$security_os${RESET}"
-   echo -e "ℹ️   ChangeLoG: ${GREEN}$about_update_url${RESET}"
-   echo -e "ℹ️   Status OTA: ${BLUE}$version_type_id${RESET}"
-  
+clear
+echo -e "\n                  📱 ${BLUE}${model_name:-$phone_name}${RESET}"
+echo -e "\n               (${device_model})${GREEN}$region_name${RESET}  (code:${YELLOW}$region_code${RESET})" 
+echo -e "${RED}+=======================================================+${RESET}"
+echo -e "${RED}|=======${RESET}           ${YELLOW} OUTPUT FROM SERVER${RESET}           ${RED}=======|${RESET}"
+echo -e "${RED}+=======================================================+${RESET}"
+printf "| %-17s | %-33s |\n" "NAME" "DATA"
+echo -e "+-------------------+-----------------------------------+"
+
+printf "| ${GREEN}%-17s${RESET} | ${YELLOW}%-34s${RESET}|\n" "OTA Version:" "$real_ota_version"
+printf "| ${GREEN}%-17s${RESET} | ${YELLOW}%-33s${RESET} |\n" "Version Firmware:" "$real_version_name"
+printf "| ${GREEN}%-17s${RESET} | ${YELLOW}%-33s${RESET} |\n" "Android Version:" "$android_version"
+printf "| ${GREEN}%-17s${RESET} | ${YELLOW}%-33s${RESET} |\n" "OS Version:" "$os_version"
+printf "| ${GREEN}%-17s${RESET} | ${YELLOW}%-33s${RESET} |\n" "Security Patch:" "$security_os"
+printf "| ${GREEN}%-17s${RESET} | ${YELLOW}%-33s${RESET} |\n" "OTA Status:" "$version_type_id"
+
+echo -e "${RED}+=======================================================+${RESET}"
+echo -e
 
     download_link=$(echo "$output" | grep -o 'http[s]*://[^"]*' | head -n 1 | sed 's/["\r\n]*$//')
     modified_link=$(echo "$download_link" | sed 's/componentotacostmanual/opexcostmanual/g')
 
-    echo -e "\n📥 OTA version: ${BLUE}$ota_version_full${RESET}"
+    echo -e "                        ChangeLoG: 
+ℹ️    ${YELLOW}$about_update_url${RESET}"
+    echo -e
     if [[ -n "$modified_link" ]]; then
-        echo -e "📥 Download URL: ${GREEN}$modified_link${RESET}"
+    echo -e "                        Download URL: 
+📥 ${GREEN}$modified_link${RESET}"
     else
         echo -e "❌ Download URL not found."
     fi
@@ -106,27 +125,28 @@ echo "$modified_link" >> OTA_links.csv
 
 # 📌 Výpis regiónov
 clear
-echo -e "${GREEN}=======================================${RESET}"
-echo -e "${GREEN}===${RESET}  ${YELLOW}OnePlus/OPPO/Realme OTAFindeR${RESET}  ${GREEN}===${RESET}"
-echo -e "${GREEN}=======================================${RESET}"
-printf "| %-5s | %-6s | %-18s |\n" "Manif" "R Code" "Region"
-echo -e "---------------------------------------"
+echo -e "${GREEN}+================================================+${RESET}"
+echo -e "${GREEN}|==${RESET}       ${YELLOW}OnePlus/OPPO/Realme  OTAFindeR${RESET}       ${GREEN}==|${RESET}"
+echo -e "${GREEN}+================================================+${RESET}"
+printf "| %-5s | %-6s | %-18s | %-8s |\n" "Manif" "R Code" "Region" "NV"
+echo -e "+------------------------------------------------+"
 
 # Výpis tabuľky
 for key in "${!REGIONS[@]}"; do
     region_data=(${REGIONS[$key]})
     region_code=${region_data[0]}
     region_name=${region_data[1]}
+    nv_images=${region_data[2]}
 
-printf "|  ${YELLOW}%-4s${RESET} | %-6s | %-18s |\n" "$key" "$region_code" "$region_name"
+printf "|  ${YELLOW}%-4s${RESET} | %-6s | %-18s | %-8s |\n" "$key" "$region_code" "$region_name" "$nv_images"
 done
 
 
 
-echo -e "---------------------------------------"
-echo -e "${GREEN}=======================================${RESET}"
-echo -e "${GREEN}===${RESET}" "OTA version :  ${BLUE}A${RESET} ,  ${BLUE}C${RESET} ,  ${BLUE}F${RESET} ,  ${BLUE}H${RESET}"      "${GREEN}===${RESET}"
-echo -e "${GREEN}=======================================${RESET}"
+echo -e "+------------------------------------------------+"
+echo -e "${GREEN}+================================================+${RESET}"
+echo -e "${GREEN}|===${RESET}"   "     OTA version : ${BLUE}A${RESET} ,  ${BLUE}C${RESET} ,  ${BLUE}F${RESET} ,  ${BLUE}H${RESET}"             "     ${GREEN}===|${RESET}"
+echo -e "${GREEN}+================================================+${RESET}"
 
 # Zoznam prefixov
 echo -e "📦 Choose model prefix: 
@@ -135,16 +155,17 @@ echo -e
 read -p "💡 Select an option (1/2/3/4): " choice
 
 if [[ "$choice" == "4" ]]; then
-    echo -e "\n📱 ${PURPLE}Selected device from list :${RESET}"
-echo -e "${GREEN}=============================================================${RESET}"
-    printf "| %-2s| %-20s | %-14s | %-6s | %-3s |\n" "No." "Device" "Model" "Manif" "OTA"
-    echo -e "+----+----------------------+----------------+--------+-----+"
+clear
+echo -e "\n📱 ${PURPLE}Selected device from list :${RESET}"
+echo -e "${GREEN}=======================================================${RESET}"
+    printf "| %-2s| %-18s | %-11s | %-4s | %-2s |\n" "No." "Device" "Model" "Manif" "OTA"
+    echo -e "+----+--------------------+-------------+-------+-----+"
     mapfile -t devices < <(grep -v '^\s*$' realme.txt)
     for i in "${!devices[@]}"; do
         IFS='|' read -r d m r v <<< "${devices[$i]}"
-        printf "| ${YELLOW}%-2d${RESET} | %-20s | %-14s | %-6s | %-3s |\n" $((i+1)) "$d" "$m" "$r" "$v"
+        printf "| ${YELLOW}%-2d${RESET} | %-18s | %-11s | %-5s | %-3s |\n" $((i+1)) "$d" "$m" "$r" "$v"
     done
-echo -e "${GREEN}=============================================================${RESET}" 
+echo -e "${GREEN}=======================================================${RESET}" 
 read -p "🔢 Select device number: " selected
     if ! [[ "$selected" =~ ^[0-9]+$ ]] || (( selected < 1 || selected > ${#devices[@]} )); then echo "❌ Invalid selection."; exit 1; fi
     IFS='|' read -r selected_name selected_model region version <<< "${devices[$((selected-1))]}"
@@ -219,4 +240,3 @@ while true; do
             ;;
     esac
 done
-
