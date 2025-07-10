@@ -130,7 +130,7 @@ chmod 700 -R "$TXT_DIR"
 
 echo -e "${BLUE}Создаем файл : $FN_FILE...${RESET}"
 {
-echo "    models.txt
+echo "    models.txt"
 echo "RMX1803|Realme 2 Pro"
 echo "RMX1807|Realme 2 Pro"
 echo "RMX1809|Realme 2"
