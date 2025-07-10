@@ -4,7 +4,6 @@ export DEBIAN_FRONTEND=noninteractive
 
 # --- НАСТРОЙКИ ---
 B_SH_URL="https://raw.githubusercontent.com/EvGRaF87/OTAFinder/refs/heads/main/real.sh"
-# --- КОНЕЦ НАСТРОЕК ---
 
 # Colors
 GREEN="\e[32m"
