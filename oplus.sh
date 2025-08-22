@@ -6,6 +6,7 @@ YELLOW="\e[33m"; BLUE="\e[34m"; RESET="\e[0m"
 
 # 📌 Regions, versions, and servers
 declare -A REGIONS=(
+    [A1]="NA US 10100001"
     [A4]="APC Global 10100100"
     [A5]="OCA Oce_Cen_Australia 10100101"
     [A6]="MEA Middle_East_Africa 10100110"
