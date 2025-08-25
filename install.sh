@@ -96,9 +96,9 @@ chmod 700 -R "$TXT_DIR"
 
 echo -e "${BLUE}Создаем файл : $TXT_FILE...${RESET}"
 {
-  echo "OnePlus 13 IN|CPH2649IN|1B|A"
-  echo "OnePlus 13 EU|CPH2653EEA|44|A"
-  echo "OnePlus 13 ROW|CPH2653|A7|A"
+  echo "OnePlus 13 IN|CPH2649IN|1B|C"
+  echo "OnePlus 13 EU|CPH2653EEA|44|C"
+  echo "OnePlus 13 ROW|CPH2653|A7|C"
   echo "OnePlus 13 CN|PJZ110|97|A"
   echo "OnePlus Ace5|PKG110|97|A"
   echo "OnePlus 13R IN|CPH2691IN|1B|C"
