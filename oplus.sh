@@ -65,6 +65,7 @@ done
     android_version=$(echo "$output" | grep -o '"androidVersion": *"[^"]*"' | cut -d '"' -f4)
 # Získať URL k About this update
     about_update_url=$(echo "$output" | grep -oP '"panelUrl"\s*:\s*"\K[^"]+')
+    local_update=$(echo "$output" | grep -oP '"ota_local_update"\s*:\s*"\K[^"]+')
 
 # Získať VersionTypeId
     version_type_id=$(echo "$output" | grep -oP '"versionTypeId"\s*:\s*"\K[^"]+')
@@ -92,6 +93,7 @@ printf "| ${GREEN}%-17s${RESET} | ${YELLOW}%-33s${RESET} |\n" "Android Version:"
 printf "| ${GREEN}%-17s${RESET} | ${YELLOW}%-33s${RESET} |\n" "OS Version:" "$os_version"
 printf "| ${GREEN}%-17s${RESET} | ${YELLOW}%-33s${RESET} |\n" "Security Patch:" "$security_os"
 printf "| ${GREEN}%-17s${RESET} | ${YELLOW}%-33s${RESET} |\n" "OTA Status:" "$version_type_id"
+printf "| ${GREEN}%-17s${RESET} | ${YELLOW}%-33s${RESET} |\n" "Local Update:" "$local_update"
 
 echo -e "${RED}+=======================================================+${RESET}"
 echo -e
