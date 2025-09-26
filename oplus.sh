@@ -144,7 +144,6 @@ echo -e "+------------------------------------------------+"
 echo -e "${GREEN}+================================================+${RESET}"
 echo -e "${GREEN}|===${RESET}"   "     OTA version : ${BLUE}A${RESET} ,  ${BLUE}C${RESET} ,  ${BLUE}F${RESET} ,  ${BLUE}H${RESET}"             "     ${GREEN}===|${RESET}"
 echo -e "${GREEN}+================================================+${RESET}"
-
 echo -e "📦 Choose model prefix: 
 ${YELLOW}1) CPH${RESET}, ${GREEN}2) RMX${RESET}, ${BLUE}3) Custom${RESET}, ${PURPLE}4) List Devices${RESET}"
 echo -e
