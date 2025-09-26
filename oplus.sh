@@ -94,7 +94,6 @@ echo -e
 
     download_link=$(echo "$output" | grep -o 'http[s]*://[^"]*' | head -n 1 | sed 's/["\r\n]*$//')
     modified_link=$(echo "$download_link" | sed 's/componentotacostmanual/opexcostmanual/g')
-	modified_links=$(echo "$download_link" | sed 's/componentotamanual/opexcostmanual/g')
 
     echo -e "                        ChangeLoG: 
 ℹ️    ${YELLOW}$about_update_url${RESET}"
@@ -112,7 +111,6 @@ echo -e
     echo "$ota_version_full" >> "OTA_${device_model}.txt"
     echo "$real_version_name" >> "OTA_${device_model}.txt"
     echo "$modified_link" >> "OTA_${device_model}.txt"
-	echo "$modified_links" >> "OTA_${device_model}.txt"
     echo "" >> "OTA_${device_model}.txt"
 
     [[ ! -f OTA_links.csv ]] && echo "OTA Version & URL:" > OTA_links.csv
