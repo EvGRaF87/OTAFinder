@@ -35,6 +35,7 @@ declare -A SERVERS=(
   [97]="-r 1" [44]="-r 0" [51]="-r 0"
 )
 
+# 📌 Funkcia na spracovanie OTA
 run_ota() {
     region_data=(${REGIONS[$region]})
     region_code=${region_data[0]}
@@ -62,8 +63,10 @@ done
 	os_version=$(echo "$output" | grep -o '"realOsVersion": *"[^"]*"' | cut -d '"' -f4)
     security_os=$(echo "$output" | grep -o '"securityPatchVendor": *"[^"]*"' | cut -d '"' -f4)
     android_version=$(echo "$output" | grep -o '"androidVersion": *"[^"]*"' | cut -d '"' -f4)
+# Získať URL k About this update
     about_update_url=$(echo "$output" | grep -oP '"panelUrl"\s*:\s*"\K[^"]+')
 
+# Získať VersionTypeId
     version_type_id=$(echo "$output" | grep -oP '"versionTypeId"\s*:\s*"\K[^"]+')
 
 # Device_name    
@@ -73,6 +76,7 @@ result=$(grep "^$ota_model|" "$file" | head -n 1)
 
 phone_name=${result#*|}
 
+# Výpis
 clear
 echo -e "\n                  📱 ${BLUE}${model_name:-$phone_name}${RESET}"
 echo -e "\n               (${device_model})${GREEN}$region_name${RESET}  (code:${YELLOW}$region_code${RESET})" 
@@ -101,7 +105,6 @@ echo -e
     if [[ -n "$modified_link" ]]; then
     echo -e "                        Download URL: 
 📥 ${GREEN}$modified_link${RESET}"
-📥 ${GREEN}$modified_links${RESET}"
     else
         echo -e "❌ Download URL not found."
     fi
@@ -121,6 +124,7 @@ echo "$real_version_name" >> OTA_links.csv
 echo "$modified_link" >> OTA_links.csv
 }
 
+# 📌 Výpis regiónov
 clear
 echo -e "${GREEN}+================================================+${RESET}"
 echo -e "${GREEN}|==${RESET}       ${YELLOW}OnePlus/OPPO/Realme  OTAFindeR${RESET}       ${GREEN}==|${RESET}"
@@ -128,6 +132,7 @@ echo -e "${GREEN}+================================================+${RESET}"
 printf "| %-5s | %-6s | %-18s | %-8s |\n" "Manif" "R Code" "Region" "NV"
 echo -e "+------------------------------------------------+"
 
+# Výpis tabuľky
 for key in "${!REGIONS[@]}"; do
     region_data=(${REGIONS[$key]})
     region_code=${region_data[0]}
@@ -138,10 +143,13 @@ printf "|  ${YELLOW}%-4s${RESET} | %-6s | %-18s | %-8s |\n" "$key" "$region_code
 done
 
 
+
 echo -e "+------------------------------------------------+"
 echo -e "${GREEN}+================================================+${RESET}"
 echo -e "${GREEN}|===${RESET}"   "     OTA version : ${BLUE}A${RESET} ,  ${BLUE}C${RESET} ,  ${BLUE}F${RESET} ,  ${BLUE}H${RESET}"             "     ${GREEN}===|${RESET}"
 echo -e "${GREEN}+================================================+${RESET}"
+
+# Zoznam prefixov
 echo -e "📦 Choose model prefix: 
 ${YELLOW}1) CPH${RESET}, ${GREEN}2) RMX${RESET}, ${BLUE}3) Custom${RESET}, ${PURPLE}4) List Devices${RESET}"
 echo -e
@@ -195,9 +203,12 @@ else
     fi
 fi
 
+# ✅ Zavolanie OTA funkcie alebo skriptu
 run_ota
 
 
+
+# 🔁 Cyklus pre ďalšie voľby
 while true; do
     echo -e "\n🔄 1 - Change only region/version"
     echo -e "🔄 2 - Change device model"
@@ -219,7 +230,7 @@ while true; do
             run_ota
             ;;
         2)
-            bash "$0"
+            bash "$0"  # reštart skriptu
             ;;
         0)
             echo -e "👋 Goodbye."
