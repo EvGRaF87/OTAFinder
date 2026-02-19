@@ -42,23 +42,36 @@ read -p "Нажмите [Enter] для начала..."
 
 # --- Шаг 1: Настройка хранилища и обновление пакетов ---
 echo -e "\n${GREEN}>>> Шаг 1: Настройка хранилища и обновление системы...${RESET}"
+echo " "
 termux-setup-storage
 mkdir -p "$OTA_DIR" || handle_error "Не удалось создать папку $OTA_DIR."
-
-DPKG_OPTIONS="-o Dpkg::Options::=--force-confold"
-pkg update -y || handle_error "Не удалось обновить списки пакетов."
-pkg upgrade -y $DPKG_OPTIONS || handle_error "Не удалось обновить пакеты."
+echo " "
+echo "📦 Fixing broken packages and cleaning up..."
+echo " "
+dpkg --configure -a || true
+apt --fix-broken install -y || true
+apt clean
+echo " "
+echo "📦 Updating Termux and installing dependencies..."
+echo " "
+yes "" | pkg update -y
+yes "" | pkg upgrade -y
+echo " "
 echo -e "${GREEN}Система Termux успешно обновлена.${RESET}"
+echo " "
 
-# --- Шаг 2: Установка зависимостей ---
+# --- Шаг 2: Установка Python модулей и зависимостей ---
 echo -e "\n${GREEN}>>> Шаг 2: Установка системных пакетов (python, git, tsu)...${RESET}"
-pkg install -y $DPKG_OPTIONS python python2 git tsu curl || handle_error "Не удалось установить системные пакеты."
-echo -e "${GREEN}Все системные пакеты установлены.${RESET}"
-
-# --- Шаг 3: Установка Python-модулей ---
-echo -e "\n${GREEN}>>> Шаг 3: Установка Python-модулей...${RESET}"
-pip install --upgrade pip wheel pycryptodome || handle_error "Не удалось установить wheel или pycryptodome."
-pip3 install --upgrade requests pycryptodome git+https://github.com/R0rt1z2/realme-ota || handle_error "Не удалось установить realme-ota."
+echo " "
+echo "📦 Installing required packages..."
+echo " "
+pkg install aria2 -y
+pip install aiohttp 
+pkg install -y python python2 git tsu curl
+pip install wheel
+pip install pycryptodome
+pip3 install --upgrade requests pycryptodome git+https://github.com/R0rt1z2/realme-ota
+echo " "
 
 # Права доступа
 if [ -f "$REALME_OTA_BIN" ]; then
@@ -67,11 +80,11 @@ if [ -f "$REALME_OTA_BIN" ]; then
 else
     echo -e "${YELLOW}ПРЕДУПРЕЖДЕНИЕ: Не найден файл $REALME_OTA_BIN. Возможны проблемы в работе.${RESET}"
 fi
-echo -e "${GREEN}Python-модули успешно установлены и настроены.${RESET}"
+echo -e "${GREEN}Python-модули и зависимости успешно установлены и настроены.${RESET}"
 
-# --- Шаг 4: Загрузка скрипта ota_tool.sh ---
-echo -e "\n${GREEN}>>> Шаг 4: 📥 Загрузка скрипта (ota_tool.sh)...${RESET}"
-
+# --- Шаг 3: Загрузка скрипта ota_tool.sh ---
+echo -e "\n${GREEN}>>> Шаг 3: 📥 Загрузка скрипта (ota_tool.sh)...${RESET}"
+echo " "
 if [ ! -d "$OTA_DIR" ]; then
   mkdir -p "$OTA_DIR"
   if [ $? -eq 0 ]; then
@@ -83,20 +96,22 @@ if [ ! -d "$OTA_DIR" ]; then
 else
   echo "Папка '$OTA_DIR' уже существует."
 fi
-
+echo " "
 curl -sL "$B_SH_URL" -o "$B_SH_PATH"
-
+echo " "
 if [ $? -ne 0 ]; then
     handle_error "Не удалось скачать скрипт ota_tool.sh!"
 fi
 if [ ! -f "$B_SH_PATH" ] || [ ! -s "$B_SH_PATH" ]; then
     handle_error "Файл ota_tool.sh не был загружен или пуст! Проверьте URL и интернет-соединение."
 fi
+echo " "
 echo -e "${GREEN}Скрипт ota_tool.sh успешно загружен в $B_SH_PATH${RESET}"
+echo " "
 
-# --- Шаг 5: Загрузка других скриптов ---
-echo -e "\n${GREEN}>>> Шаг 5: 📥 Загрузка скриптов ...${RESET}"
-
+# --- Шаг 4: Загрузка других скриптов ---
+echo -e "\n${GREEN}>>> Шаг 4: 📥 Загрузка скриптов ...${RESET}"
+echo " "
 for file in oplus.sh sharelink.sh downloader.sh edl_finder.py check_arb.sh phone_name.txt phone_names.txt devices.txt; do
     echo "➡️  $file"
     http_code=$(curl -L -w "%{http_code}" -o "$file" "$REPO/$file")
@@ -107,21 +122,22 @@ for file in oplus.sh sharelink.sh downloader.sh edl_finder.py check_arb.sh phone
         exit 1
     fi
 done
-
+echo " "
 echo "✅ All files downloaded successfully"
 chmod +x oplus.sh sharelink.sh downloader.sh edl_finder.py check_arb.sh
 
-# --- Шаг 6: Загрузка ARBSCAN ---
-echo -e "\n${GREEN}>>> Шаг 6: 📥 Загрузка ARBScan...${RESET}"
-
+# --- Шаг 5: Загрузка ARBSCAN ---
+echo -e "\n${GREEN}>>> Шаг 5: 📥 Загрузка ARBScan...${RESET}"
+echo " "
 curl -sL "$ARBSCAN_URL" -o "$ARBSCAN_BIN"
-
+echo " "
 if [ $? -ne 0 ]; then
     handle_error "Не удалось скачать скрипт arbscan!"
 fi
 if [ ! -f "$ARBSCAN_BIN" ] || [ ! -s "$ARBSCAN_BIN" ]; then
     handle_error "Файл arbscan не был загружен или пуст! Проверьте URL и интернет-соединение."
 fi
+echo " "
 echo -e "${GREEN}Скрипт arbscan успешно загружен в $ARBSCAN_BIN${RESET}"
 
 # Права доступа
@@ -132,8 +148,8 @@ else
     echo -e "${YELLOW}ПРЕДУПРЕЖДЕНИЕ: Не найден файл $ARBSCAN_BIN. Возможны проблемы в работе.${RESET}"
 fi
 
-# --- Шаг 7: Создание ярлыка для виджета ---
-echo -e "\n${GREEN}>>> Шаг 7: 🛠️ Создание ярлыка...${RESET}"
+# --- Шаг 6: Создание ярлыка для виджета ---
+echo -e "\n${GREEN}>>> Шаг 6: 🛠️ Создание ярлыка...${RESET}"
 SHORTCUT_DIR="$HOME/.shortcuts"
 SHORTCUT_FILE="$SHORTCUT_DIR/OTATools"
 
