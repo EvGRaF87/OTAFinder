@@ -19,7 +19,7 @@ echo " "
 NAME="OTA FindeR"
 AUTHOR="SeRViP"
 
-# 🎨 Farby pre výstup
+# 🎨 Colors
 WHITE="\033[37m"
 PURPLE="\033[35m" 
 YELLOW="\033[33m"
