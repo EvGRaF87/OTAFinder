@@ -59,23 +59,26 @@ RMX5011|Realme GT7 Pro
 RMX5090|Realme GT7 Pro Racing Edition
 RMX5061|Realme GT7
 RMX6688|Realme GT7
+RMX5200|Realme GT8 Pro CN
+RMX5210|Realme GT8 Pro
+RMX6699|Realme GT8
 CPH2653|OnePlus 13
 CPH2655|OnePlus 13
-CPH2649|OnePlus 13
+CPH2649|OnePlus 13 IN
 PJZ110|OnePlus 13 CN
 PLK110|OnePlus 15 CN
 CPH2747|OnePlus 15
-CPH2745|OnePlus 15
-CPH2767|OnePlus 15R
+CPH2745|OnePlus 15 IN
+CPH2767|OnePlus 15R IN
 CPH2769|OnePlus 15R
-CPH2573|OnePlus 12
+CPH2573|OnePlus 12 IN
 CPH2581|OnePlus 12
 CPH2583|OnePlus 12
 PJD110|OnePlus 12 CN
 PKX110|OnePlus 13T
 CPH2723|OnePlus 13s
 CPH2645|OnePlus 13R
-CPH2691|OnePlus 13R
+CPH2691|OnePlus 13R IN
 PKG110|OnePlus Ace 5
 PLQ110|OnePlus Ace 6
 PLR110|OnePlus Ace 6T
@@ -149,7 +152,7 @@ LE2127|OnePlus 9 Pro T-Mobile
 MT2110|OnePlus 9RT
 MT2111|OnePlus 9RT
 NE2210|OnePlus 10 Pro CN
-NE2211|OnePlus 10 Pro
+NE2211|OnePlus 10 Pro IN
 NE2213|OnePlus 10 Pro
 NE2215|OnePlus 10 Pro North America
 NE2217|OnePlus 10 Pro T-Mobile
@@ -163,7 +166,7 @@ CPH2415|OnePlus 10T
 CPH2417|OnePlus 10T North America
 CPH2419|OnePlus 10T T-Mobile
 PHB110|OnePlus 11 CN
-CPH2447|OnePlus 11
+CPH2447|OnePlus 11 IN
 CPH2449|OnePlus 11
 CPH2451|OnePlus 11 North America
 PHK110|OnePlus Ace 2
@@ -173,7 +176,7 @@ CPH2491|OnePlus Nord 3
 CPH2493|OnePlus Nord 3
 PJA110|OnePlus Ace 2 Pro
 PJE110|OnePlus Ace 3
-CPH2585|OnePlus 12R
+CPH2585|OnePlus 12R IN
 CPH2609|OnePlus 12R
 CPH2611|OnePlus 12R North America
 PJF110|OnePlus Ace 3V
