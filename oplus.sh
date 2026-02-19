@@ -1,6 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-
 NAME="OTA FindeR"
 AUTHOR="SeRViP"
 
