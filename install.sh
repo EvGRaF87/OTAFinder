@@ -66,11 +66,11 @@ echo " "
 echo "📦 Installing required packages..."
 echo " "
 pkg install aria2 -y
-pip install aiohttp 
 pkg install -y python python2 git tsu curl
 pip install wheel
 pip install pycryptodome
 pip3 install --upgrade requests pycryptodome git+https://github.com/R0rt1z2/realme-ota
+pip install aiohttp
 echo " "
 
 # Права доступа
