@@ -8,7 +8,7 @@ NAME="OTA Tool"
 VERSION="1.5"
 AUTHOR="SeRViP"
 
-BASE_DIR="$HOME/OTA"
+BASE_DIR="$HOME"
 SCRIPT_DIR="$BASE_DIR"
 
 # ====== COLORS ======
