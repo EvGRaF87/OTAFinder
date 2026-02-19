@@ -16,5 +16,4 @@ All-in-one toolkit for OnePlus / Realme / Oppo OTA firmware.
 - arbscan
 
 ## Usage
-Run:
 Run script from Termux Widget
