@@ -1,717 +1,579 @@
-echo "    models.txt"
-echo "RMX1803|Realme 2 Pro"
-echo "RMX1807|Realme 2 Pro"
-echo "RMX1809|Realme 2"
-echo "RMX1827|Realme 3i"
-echo "RMX1971|Realme Q"
-echo "RMX2072|Realme X50 Pro Player Edition"
-echo "RMX2111|Realme V5 5G"
-echo "RMX2112|Realme V5 5G"
-echo "RMX2117|Realme Q2"
-echo "RMX2144|Realme X50/Realme X50m"
-echo "RMX2173|Realme Q2 Pro"
-echo "RMX2200|Realme V3"
-echo "RMX2202|Realme GT 5G"
-echo "RMX2205|Realme Q3 Pro 5G"
-echo "RMX3031|Realme GT Neo 5G"
-echo "RMX3092|Realme V15 5G"
-echo "RMX3093|Realme V15 5G"
-echo "RMX3115|Realme X7 Pro Ultra 5G"
-echo "RMX3121|Realme V11 5G"
-echo "RMX3122|Realme V11 5G"
-echo "RMX3142|Realme Q3 Pro Carnival"
-echo "RMX3161|Realme Q3 5G"
-echo "RMX3461|Realme Q3s/Realme 9 5G SE"
-echo "RMX3300|Realme GT2 Pro"
-echo "RMX3301|Realme GT2 Pro"
-echo "RMX3310|Realme GT2"
-echo "RMX3311|Realme GT2"
-echo "RMX3312|Realme GT2"
-echo "RMX3350|Realme GT Neo Flash 5G"
-echo "RMX3357|Realme GT Neo 2T"
-echo "RMX3372|Realme Q5 Pro"
-echo "RMX3478|Realme Q5"
-echo "RMX3521|Realme 9 4G"
-echo "RMX3551|Realme GT2 Master Explorer"
-echo "RMX3574|Realme Q5i"
-echo "RMX3360|Realme GT Master Edition"
-echo "RMX3363|Realme GT Master Edition"
-echo "RMX3370|Realme GT Neo2"
-echo "RMX3561|Realme GT Neo3 80W"
-echo "RMX3563|Realme GT Neo3 150W"
-echo "RMX3371|Realme GT Neo 3T"
-echo "RMX3700|Realme GT Neo5 SE"
-echo "RMX3701|Realme GT Neo5 SE"
-echo "RMX3706|Realme GT Neo5 150W"
-echo "RMX3708|Realme GT Neo5 240W"
-echo "RMX3709|Realme GT3 240W"
-echo "RMX3800|Realme GT6 China"
-echo "RMX3850|Realme GT Neo6 SE"
-echo "RMX3820|Realme GT5 150W"
-echo "RMX3823|Realme GT5 240W"
-echo "RMX3851|Realme GT6"
-echo "RMX3853|Realme GT 6T"
-echo "RMX3852|Realme GT Neo6"
-echo "RMX5060|Realme Neo7"
-echo "RMX3888|Realme GT5 Pro"
-echo "RMX5010|Realme GT7 Pro"
-echo "RMX5011|Realme GT7 Pro"
-echo "RMX5200|Realme GT8 Pro"
-echo "RMX5210|Realme GT8 Pro"
-echo "RMX5090|Realme GT7 Pro Racing Edition"
-echo "RMX5061|Realme GT7"
-echo "RMX6688|Realme GT7"
-echo "RMX6699|Realme GT8"
-echo "CPH2653|OnePlus 13"
-echo "CPH2655|OnePlus 13"
-echo "CPH2649|OnePlus 13"
-echo "PJZ110|OnePlus 13"
-echo "PLK110|OnePlus 15"
-echo "CPH2747|OnePlus 15"
-echo "CPH2745|OnePlus 15"
-echo "CPH2749|OnePlus 15"
-echo "CPH2573|OnePlus 12"
-echo "CPH2581|OnePlus 12"
-echo "CPH2583|OnePlus 12"
-echo "PJD110|OnePlus 12"
-echo "PKX110|OnePlus 13T"
-echo "CPH2723|OnePlus 13s"
-echo "CPH2645|OnePlus 13R"
-echo "CPH2691|OnePlus 13R"
-echo "PKG110|OnePlus Ace 5"
-echo "PLQ110|OnePlus Ace 6"
-echo "ONE A0001|OnePlus ONE China"
-echo "ONE A1001|OnePlus ONE China Unicom"
-echo "ONE A2001|OnePlus 2 China"
-echo "ONE A2003|OnePlus 2"
-echo "ONE A2005|OnePlus 2 North America"
-echo "ONE E1000|OnePlus X China"
-echo "ONE E1001|OnePlus X China Unicom"
-echo "ONE E1003|OnePlus X"
-echo "ONE E1005|OnePlus X North America"
-echo "ONEPLUS A3000|OnePlus 3 China / North America"
-echo "ONEPLUS A3003|OnePlus 3"
-echo "ONEPLUS A3010|OnePlus 3T China"
-echo "ONEPLUS A3013|OnePlus 3T"
-echo "ONEPLUS A5000|OnePlus 5"
-echo "ONEPLUS A5010|OnePlus 5T"
-echo "ONEPLUS A6000|OnePlus 6 China"
-echo "ONEPLUS A6003|OnePlus 6"
-echo "ONEPLUS A6010|OnePlus 6T China"
-echo "ONEPLUS A6013|OnePlus 6T"
-echo "GM1900|OnePlus 7 China"
-echo "GM1901|OnePlus 7"
-echo "GM1903|OnePlus 7"
-echo "GM1905|OnePlus 7 North America / Global"
-echo "GM1910|OnePlus 7 Pro China"
-echo "GM1911|OnePlus 7 Pro"
-echo "GM1913|OnePlus 7 Pro"
-echo "GM1915|OnePlus 7 Pro North America / Global"
-echo "GM1917|OnePlus 7 Pro T-Mobile"
-echo "GM1920|OnePlus 7 Pro 5G"
-echo "GM1925|OnePlus 7 Pro 5G Sprint"
-echo "HD1900|OnePlus 7T China"
-echo "HD1901|OnePlus 7T"
-echo "HD1903|OnePlus 7T"
-echo "HD1905|OnePlus 7T North America / Global"
-echo "HD1907|OnePlus 7T T-Mobile"
-echo "HD1910|OnePlus 7T Pro"
-echo "HD1911|OnePlus 7T Pro"
-echo "HD1913|OnePlus 7T Pro"
-echo "HD1925|OnePlus 7T Pro 5G T-Mobile"
-echo "IN2010|OnePlus 8 China"
-echo "IN2011|OnePlus 8"
-echo "IN2013|OnePlus 8"
-echo "IN2015|OnePlus 8 North America / Global"
-echo "IN2017|OnePlus 8 T-Mobile"
-echo "IN2019|OnePlus 8 Visible / Verzion"
-echo "IN2020|OnePlus 8 Pro"
-echo "IN2021|OnePlus 8 Pro"
-echo "IN2023|OnePlus 8 Pro"
-echo "IN2025|OnePlus 8 Pro North America / Global"
-echo "KB2000|OnePlus 8T"
-echo "KB2001|OnePlus 8T"
-echo "KB2003|OnePlus 8T"
-echo "KB2005|OnePlus 8T North America / Global"
-echo "KB2007|OnePlus 8T+ T-Mobile"
-echo "LE2100|OnePlus 9R"
-echo "LE2101|OnePlus 9R"
-echo "LE2110|OnePlus 9"
-echo "LE2111|OnePlus 9"
-echo "LE2113|OnePlus 9"
-echo "LE2115|OnePlus 9 North America"
-echo "LE2117|OnePlus 9 T-Mobile"
-echo "LE2119|OnePlus 9 Verzion"
-echo "LE2120|OnePlus 9 Pro"
-echo "LE2121|OnePlus 9 Pro"
-echo "LE2123|OnePlus 9 Pro"
-echo "LE2125|OnePlus 9 Pro"
-echo "LE2127|OnePlus 9 Pro T-Mobile"
-echo "MT2110|OnePlus 9RT"
-echo "MT2111|OnePlus 9RT"
-echo "NE2210|OnePlus 10 Pro"
-echo "NE2211|OnePlus 10 Pro"
-echo "NE2213|OnePlus 10 Pro"
-echo "NE2215|OnePlus 10 Pro North America"
-echo "NE2217|OnePlus 10 Pro T-Mobile"
-echo "PGKM10|OnePlus Ace"
-echo "CPH2423|OnePlus 10R"
-echo "CPH2411|OnePlus 10R Endurance India"
-echo "PGZ110|OnePlus Ace Race"
-echo "PGP110|OnePlus Ace Pro"
-echo "CPH2413|OnePlus 10T"
-echo "CPH2415|OnePlus 10T"
-echo "CPH2417|OnePlus 10T North America"
-echo "CPH2419|OnePlus 10T T-Mobile"
-echo "PHB110|OnePlus 11"
-echo "CPH2447|OnePlus 11"
-echo "CPH2449|OnePlus 11"
-echo "CPH2451|OnePlus 11 North America"
-echo "PHK110|OnePlus Ace 2"
-echo "CPH2487|OnePlus 11R"
-echo "PHP110|OnePlus Ace 2V"
-echo "CPH2491|OnePlus Nord 3"
-echo "CPH2493|OnePlus Nord 3"
-echo "PJA110|OnePlus Ace 2 Pro"
-echo "PJE110|OnePlus Ace 3"
-echo "CPH2585|OnePlus 12R"
-echo "CPH2609|OnePlus 12R"
-echo "CPH2611|OnePlus 12R North America"
-echo "PJF110|OnePlus Ace 3V"
-echo "PJX110|OnePlus Ace 3 Pro"
-echo "CPH2655|OnePlus 13 North America"
-echo "CPH2647|OnePlus 13R"
-echo "PKR110|OnePlus Ace 5 Pro"
-echo "PLC110|OnePlus Ace 5 Ultra"
-echo "PLF110|OnePlus Ace 5 Race"
-echo "AC2001|OnePlus Nord"
-echo "AC2003|OnePlus Nord"
-echo "DN2101|OnePlus Nord 2"
-echo "DN2103|OnePlus Nord 2"
-echo "CPH2399|OnePlus Nord 2T"
-echo "CPH2401|OnePlus Nord 2T"
-echo "CPH2661|OnePlus Nord 4"
-echo "CPH2663|OnePlus Nord 4"
-echo "CPH2707|OnePlus Nord 5"
-echo "CPH2709|OnePlus Nord 5"
-echo "EB2101|OnePlus Nord CE"
-echo "EB2103|OnePlus Nord CE"
-echo "IV2201|OnePlus Nord CE 2"
-echo "CPH2381|OnePlus Nord CE 2 Lite"
-echo "CPH2409|OnePlus Nord CE 2 Lite"
-echo "CPH2569|OnePlus Nord CE 3"
-echo "CPH2465|OnePlus Nord CE 3 Lite"
-echo "CPH2467|OnePlus Nord CE 3 Lite"
-echo "CPH2513|OnePlus Nord N30 North America"
-echo "CPH2515|OnePlus Nord N30 T-Mobile"
-echo "CPH2613|OnePlus Nord CE 4"
-echo "CPH2619|OnePlus Nord CE 4 Lite"
-echo "CPH2621|OnePlus Nord CE 4 Lite"
-echo "CPH2717|OnePlus Nord CE 5"
-echo "CPH2719|OnePlus Nord CE 5"
-echo "BE2025|OnePlus Nord N10 Metro"
-echo "BE2026|OnePlus Nord N10 North America"
-echo "BE2029|OnePlus Nord N10"
-echo "BE2028|OnePlus Nord N10 T-Mobile"
-echo "BE2011|OnePlus Nord N100 North America"
-echo "BE2012|OnePlus Nord N100 T-Mobile"
-echo "BE2013|OnePlus Nord N100"
-echo "BE2015|OnePlus Nord N100 Metro"
-echo "GN2200|OnePlus Nord N20"
-echo "CPH2459|OnePlus Nord N20"
-echo "CPH2469|OnePlus Nord 20 SE"
-echo "CPH2605|OnePlus Nord N30 SE"
-echo "DE2117|OnePlus Nord N200 North America"
-echo "DE2118|OnePlus Nord N200 T-Mobile"
-echo "CPH2389|OnePlus Nord N300"
-echo "CPH2551|OnePlus Open"
-echo "OPD2203|OnePlus Pad (2023)"
-echo "OPD2304|OnePlus Pad Go LTE"
-echo "OPD2305|OnePlus Pad Go Wi-Fi"
-echo "OPD2407|OnePlus Pad (2024)"
-echo "OPD2404|OnePlus Pad Pro"
-echo "OPD2403|OnePlus Pad 2"
-echo "OPD2413|OnePlus Pad 2 Pro"
-echo "OPD2415|OnePlus Pad 3"
-echo "CPH1859|Realme 1"
-echo "CPH1861|Realme 1"
-echo "RMX1805|Realme 2"
-echo "RMX1801|Realme 2 Pro"
-echo "RMX1821|Realme 3"
-echo "RMX1822|Realme 3"
-echo "RMX1825|Realme 3"
-echo "RMX1851|Realme 3 Pro"
-echo "RMX1853|Realme 3 Pro"
-echo "RMX1911|Realme 5"
-echo "RMX1915|Realme 5"
-echo "RMX1919|Realme 5"
-echo "RMX1925|Realme 5"
-echo "RMX1926|Realme 5"
-echo "RMX1927|Realme 5"
-echo "RMX1925|Realme 5s"
-echo "RMX2030|Realme 5i"
-echo "RMX2031|Realme 5i"
-echo "RMX2032|Realme 5i"
-echo "RMX1971|Realme 5 Pro"
-echo "RMX1973|Realme 5 Pro"
-echo "RMX2001|Realme 6"
-echo "RMX2003|Realme 6"
-echo "RMX2061|Realme 6 Pro"
-echo "RMX2063|Realme 6 Pro"
-echo "RMX2002|Realme 6s"
-echo "RMX2002|Realme 6i"
-echo "RMX2040|Realme 6i"
-echo "RMX2041|Realme 6i"
-echo "RMX2042|Realme 6i"
-echo "RMX2151|Realme 7"
-echo "RMX2155|Realme 7"
-echo "RMX2111|Realme 7 5G"
-echo "RMX2170|Realme 7 Pro"
-echo "RMX2103|Realme 7i"
-echo "RMX2104|Realme 7i"
-echo "RMX2193|Realme 7i"
-echo "RMX3085|Realme 8"
-echo "RMX3081|Realme 8 Pro"
-echo "RMX3241|Realme 8 5G"
-echo "RMX3151|Realme 8i"
-echo "RMX3381|Realme 8s 5G"
-echo "RMX3521|Realme 9"
-echo "RMX3491|Realme 9i"
-echo "RMX3492|Realme 9i"
-echo "RMX3493|Realme 9i"
-echo "RMX3612|Realme 9i 5G"
-echo "RMX3388|Realme 9 5G"
-echo "RMX3474|Realme 9 5G"
-echo "RMX3471|Realme 9 Pro"
-echo "RMX3472|Realme 9 Pro"
-echo "RMX3392|Realme 9 Pro+"
-echo "RMX3393|Realme 9 Pro+"
-echo "RMX3630|Realme 10"
-echo "RMX3660|Realme 10 Pro"
-echo "RMX3661|Realme 10 Pro"
-echo "RMX3686|Realme 10 Pro+"
-echo "RMX3612|Realme 10T"
-echo "RMX3636|Realme 11"
-echo "RMX3780|Realme 11 5G"
-echo "RMX3785|Realme 11x"
-echo "RMX3771|Realme 11 Pro"
-echo "RMX3741|Realme 11 Pro+"
-echo "RMX3871|Realme 12 4G"
-echo "RMX3999|Realme 12 5G"
-echo "RMX3998|Realme 12x"
-echo "RMX3867|Realme 12+"
-echo "RMX3842|Realme 12 Pro"
-echo "RMX3840|Realme 12 Pro+"
-echo "RMX3871|Realme 13 4G"
-echo "RMX3951|Realme 13 5G"
-echo "RMX5000|Realme 13+"
-echo "RMX3990|Realme 13 Pro"
-echo "RMX3990|Realme 14 Pro Lite 5G"
-echo "RMX3921|Realme 13 Pro+"
-echo "RMX5070|Realme 14"
-echo "RMX3940|Realme 14x"
-echo "RMX3943|Realme 14x"
-echo "RMX5074|Realme 14T"
-echo "RMX5078|Realme 14T"
-echo "RMX5056|Realme 14 Pro"
-echo "RMX5057|Realme 14 Pro"
-echo "RMX5051|Realme 14 Pro+"
-echo "RMX5054|Realme 14 Pro+"
-echo "RMX1901|Realme X"
-echo "RMX1921|Realme XT"
-echo "RMX1922|Realme XT"
-echo "RMX1992|Realme X2"
-echo "RMX1993|Realme X2"
-echo "RMX1931|Realme X2 Pro"
-echo "RMX2081|Realme X3"
-echo "RMX2083|Realme X3"
-echo "RMX2085|Realme X3 SuperZoom"
-echo "RMX2086|Realme X3 SuperZoom"
-echo "RMX2075|Realme X50 Pro"
-echo "RMX2076|Realme X50 Pro"
-echo "RMX3092|Realme X7"
-echo "RMX2121|Realme X7 Pro"
-echo "RMX3031|Realme X7 Max"
-echo "RMX1805|Realme C1"
-echo "RMX1941|Realme C2"
-echo "RMX1942|Realme C2"
-echo "RMX1943|Realme C2"
-echo "RMX1945|Realme C2"
-echo "RMX1946|Realme C2"
-echo "RMX2020|Realme C3"
-echo "RMX2021|Realme C3"
-echo "RMX2022|Realme C3"
-echo "RMX2027|Realme C3i Vietnam"
-echo "RMX2185|Realme C11"
-echo "RMX2186|Realme C11"
-echo "RMX3231|Realme C11 2021"
-echo "RMX2184|Realme C12"
-echo "RMX2189|Realme C12"
-echo "RMX2180|Realme C15"
-echo "RMX2181|Realme C15"
-echo "RMX2183|Realme C15"
-echo "RMX2195|Realme C15 Qualcomm Edition"
-echo "RMX2101|Realme C17"
-echo "RMX3061|Realme C20"
-echo "RMX3063|Realme C20"
-echo "RMX3201|Realme C21"
-echo "RMX3202|Realme C21"
-echo "RMX3203|Realme C21"
-echo "RMX3261|Realme C21Y"
-echo "RMX3262|Realme C21Y"
-echo "RMX3263|Realme C21Y"
-echo "RMX3191|Realme C25"
-echo "RMX3193|Realme C25"
-echo "RMX3195|Realme C25s"
-echo "RMX3197|Realme C25s"
-echo "RMX3265|Realme C25Y"
-echo "RMX3269|Realme C25Y"
-echo "RMX3581|Realme C30"
-echo "RMX3623|Realme C30"
-echo "RMX3690|Realme C30s"
-echo "RMX3501|Realme C31"
-echo "RMX3502|Realme C31"
-echo "RMX3503|Realme C31"
-echo "RMX3624|Realme C33"
-echo "RMX3627|Realme C33 2023"
-echo "RMX3511|Realme C35"
-echo "RMX3512|Realme C35"
-echo "RMX3513|Realme C35"
-echo "RMX3830|Realme C51"
-echo "RMX3765|Realme C51s"
-echo "RMX3760|Realme C53"
-echo "RMX3762|Realme C53"
-echo "RMX3710|Realme C55"
-echo "RMX3834|Realme C60"
-echo "RMX3939|Realme C61"
-echo "RMX3930|Realme C61"
-echo "RMX3933|Realme C61"
-echo "RMX3939|Realme C63"
-echo "RMX3950|Realme C63 5G"
-echo "RMX3910|Realme C65"
-echo "RMX3997|Realme C65 5G"
-echo "RMX3939|Realme C65s"
-echo "RMX3890|Realme C67"
-echo "RMX3782|Realme C67 5G"
-echo "RMX5303|Realme C71"
-echo "RMX3945|Realme C73 5G"
-echo "RMX3941|Realme C75"
-echo "RMX3943|Realme C75 5G"
-echo "RMX3963|Realme C75 5G"
-echo "RMX5020|Realme C75x"
-echo "RMX3834|Realme Note 50"
-echo "RMX3933|Realme Note 60"
-echo "RMX3938|Realme Note 60x"
-echo "RMX1831|Realme U1"
-echo "RMX1833|Realme U1"
-echo "RMX3870|Realme P1"
-echo "RMX3844|Realme P1 Pro 5G"
-echo "RMX5004|Realme P1 Speed 5G"
-echo "RMX3987|Realme P2 Pro 5G"
-echo "RMX5070|Realme P3 5G"
-echo "RMX5079|Realme P3 5G"
-echo "RMX3944|Realme P3x 5G"
-echo "RMX5032|Realme P3 Pro 5G"
-echo "RMX5030|Realme P3 Ultra 5G"
-echo "RMX5031|Realme P3 Ultra 5G"
-echo "RMX2002|Realme Narzo Indonesia"
-echo "RMX2040|Realme Narzo 10"
-echo "RMX2020|Realme Narzo 10A"
-echo "RMX2191|Realme Narzo 20"
-echo "RMX2193|Realme Narzo 20"
-echo "RMX2161|Realme Narzo 20 Pro"
-echo "RMX2163|Realme Narzo 20 Pro"
-echo "RMX2050|Realme Narzo 20A"
-echo "RMX2156|Realme Narzo 30"
-echo "RMX3242|Realme Narzo 30 5G"
-echo "RMX2117|Realme Narzo 30 Pro 5G"
-echo "RMX3171|Realme Narzo 30A"
-echo "RMX3286|Realme Narzo 50"
-echo "RMX3571|Realme Narzo 50 5G"
-echo "RMX3572|Realme Narzo 50 5G"
-echo "RMX3395|Realme Narzo 50 Pro 5G"
-echo "RMX3396|Realme Narzo 50 Pro 5G"
-echo "RMX3430|Realme Narzo 50A"
-echo "RMX3516|Realme Narzo 50A Prime"
-echo "RMX3517|Realme Narzo 50A Prime"
-echo "RMX3231|Realme Narzo 50i"
-echo "RMX3235|Realme Narzo 50i"
-echo "RMX3506|Realme Narzo 50i Prime"
-echo "RMX3761|Realme Narzo N53"
-echo "RMX3710|Realme Narzo N55"
-echo "RMX3750|Realme Narzo 60 5G"
-echo "RMX3771|Realme Narzo 60 Pro 5G"
-echo "RMX3782|Realme Narzo 60x 5G"
-echo "RMX3933|Realme NARZO N61"
-echo "RMX3939|Realme NARZO N63"
-echo "RMX3997|Realme NARZO N65 5G"
-echo "RMX3869|Realme NARZO 70 5G"
-echo "RMX3868|Realme NARZO 70 Pro 5G"
-echo "RMX3998|Realme NARZO 70x 5G"
-echo "RMX5003|Realme NARZO 70 Turbo 5G"
-echo "RMX5033|Realme NARZO 80 Pro 5G"
-echo "RMX3944|Realme NARZO 80x 5G"
-echo "RMX3945|Realme NARZO 80 Lite 5G"
-echo "CPH1871|OPPO Find X"
-echo "CPH1875|OPPO Find X"
-echo "CPH2023|OPPO Find X2"
-echo "CPH2025|OPPO Find X2 Pro"
-echo "OPG01|OPPO Find X2 Pro (KDDI)"
-echo "CPH2005|OPPO Find X2 Lite"
-echo "CPH2009|OPPO Find X2 Neo"
-echo "CPH2173|OPPO Find X3 Pro"
-echo "OPG03|OPPO Find X3 Pro (KDDI)"
-echo "CPH2145|OPPO Find X3 Lite"
-echo "CPH2207|OPPO Find X3 Neo"
-echo "CPH2307|OPPO Find X5"
-echo "CPH2305|OPPO Find X5 Pro"
-echo "CPH2371|OPPO Find X5 Lite"
-echo "PKB110|OPPO Find X8"
-echo "CPH2651|OPPO Find X8"
-echo "PKC110|OPPO Find X8 Pro"
-echo "CPH2659|OPPO Find X8 Pro"
-echo "CPH2439|OPPO Find N2"
-echo "CPH2437|OPPO Find N2 Flip"
-echo "CPH2499|OPPO Find N3"
-echo "CPH2519|OPPO Find N3 Flip"
-echo "CPH2671|OPPO Find N5"
-echo "CPH1917|OPPO Reno"
-echo "CPH1921|OPPO Reno 5G"
-echo "CPH1919|OPPO Reno 10x Zoom"
-echo "CPH1983|OPPO Reno A"
-echo "CPH1979|OPPO Reno Z"
-echo "CPH1907|OPPO Reno 2"
-echo "CPH1945|OPPO Reno 2Z"
-echo "CPH1951|OPPO Reno 2Z"
-echo "CPH1951RU|OPPO Reno 2Z"
-echo "CPH1989|OPPO Reno 2F"
-echo "CPH2043|OPPO Reno 3"
-echo "A001OP|OPPO Reno 3 (SoftBank)"
-echo "CPH2035|OPPO Reno 3 Pro"
-echo "CPH2036|OPPO Reno 3 Pro"
-echo "CPH2037|OPPO Reno 3 Pro"
-echo "CPH2009|OPPO Reno 3 Pro"
-echo "CPH2013|OPPO Reno 3A"
-echo "A002OP|OPPO Reno 3A (SoftBank)"
-echo "CPH2091|OPPO Reno 4"
-echo "CPH2113|OPPO Reno 4"
-echo "CPH2089|OPPO Reno 4 Pro"
-echo "CPH2109|OPPO Reno 4 Pro"
-echo "CPH2119|OPPO Reno 4 Lite"
-echo "CPH2125|OPPO Reno 4 Lite"
-echo "CPH2209|OPPO Reno 4F"
-echo "CPH2065|OPPO Reno 4Z"
-echo "CPH2159|OPPO Reno 5"
-echo "CPH2145|OPPO Reno 5 5G"
-echo "CPH2201|OPPO Reno 5 Pro"
-echo "CPH2207|OPPO Reno 5 Pro 5G"
-echo "CPH2205|OPPO Reno 5 Lite"
-echo "CPH2199|OPPO Reno 5A"
-echo "A101OP|OPPO Reno 5A (SoftBank)"
-echo "CPH2217|OPPO Reno 5F"
-echo "CPH2211|OPPO Reno 5Z"
-echo "CPH2213|OPPO Reno 5Z"
-echo "CPH2235|OPPO Reno 6"
-echo "CPH2251|OPPO Reno 6 5G"
-echo "CPH2247|OPPO Reno 6 Pro 5G"
-echo "CPH2249|OPPO Reno 6 Pro 5G"
-echo "CPH2237|OPPO Reno 6Z"
-echo "CPH2365|OPPO Reno 6 Lite"
-echo "CPH2363|OPPO Reno 7"
-echo "CPH2371|OPPO Reno 7 5G"
-echo "CPH2293|OPPO Reno 7 Pro 5G"
-echo "CPH2353|OPPO Reno 7A"
-echo "A201OP|OPPO Reno 7A (SoftBank)"
-echo "OPG04|OPPO Reno 7A (KDDI)"
-echo "CPH2343|OPPO Reno 7Z 5G|OPPO Reno 7 Lite 5G|OPPO Reno 8 Lite 5G"
-echo "CPH2461|OPPO Reno 8"
-echo "CPH2359|OPPO Reno 8 5G"
-echo "CPH2357|OPPO Reno 8 Pro 5G"
-echo "CPH2457|OPPO Reno 8Z 5G"
-echo "CPH2481|OPPO Reno 8T"
-echo "CPH2505|OPPO Reno 8T 5G"
-echo "CPH2523|OPPO Reno 9A"
-echo "A301OP|OPPO Reno 9A (SoftBank)"
-echo "CPH2531|OPPO Reno 10 5G"
-echo "CPH2525|OPPO Reno 10 Pro 5G"
-echo "CPH2541|OPPO Reno 10 Pro 5G (Japan)"
-echo "CPH2521|OPPO Reno 10 Pro+ 5G"
-echo "CPH2599|OPPO Reno 11 5G"
-echo "CPH2607|OPPO Reno 11 Pro 5G"
-echo "CPH2603|OPPO Reno 11F 5G / OPPO Reno 11A"
-echo "CPH2625|OPPO Reno 12 5G"
-echo "CPH2629|OPPO Reno 12 Pro 5G"
-echo "CPH2637|OPPO Reno 12F 5G / OPPO Reno 12FS 5G"
-echo "CPH2689|OPPO Reno 13 5G"
-echo "CPH2697|OPPO Reno 13 Pro 5G"
-echo "CPH2701|OPPO Reno 13F"
-echo "CPH2699|OPPO Reno 13F 5G / OPPO Reno 13A"
-echo "CPH2737|OPPO Reno 14"
-echo "CPH2739|OPPO Reno 14 Pro"
-echo "CPH2743|OPPO Reno 14F 5G"
-echo "CPH1819|OPPO F7"
-echo "CPH1821|OPPO F7"
-echo "CPH1859|OPPO F7 Youth"
-echo "CPH1823|OPPO F9"
-echo "CPH1825|OPPO F9"
-echo "CPH1881|OPPO F9"
-echo "CPH1911|OPPO F11"
-echo "CPH1969|OPPO F11 Pro"
-echo "CPH1987|OPPO F11 Pro"
-echo "CPH2001|OPPO F15"
-echo "CPH2095|OPPO F17"
-echo "CPH2197|OPPO F19"
-echo "CPH2219|OPPO F19"
-echo "CPH2217|OPPO F19 Pro"
-echo "CPH2285|OPPO F19 Pro"
-echo "CPH2213|OPPO F19 Pro+ 5G"
-echo "CPH2223|OPPO F19s"
-echo "CPH2363|OPPO F21 Pro"
-echo "CPH2341|OPPO F21 Pro 5G"
-echo "CPH2343|OPPO F21 Pro 5G"
-echo "CPH2461|OPPO F21s Pro"
-echo "CPH2455|OPPO F21s Pro 5G"
-echo "CPH2481|OPPO F23"
-echo "CPH2527|OPPO F23 5G"
-echo "CPH2603|OPPO F25 Pro 5G"
-echo "CPH2637|OPPO F27 5G"
-echo "CPH2643|OPPO F27 Pro+ 5G"
-echo "CPH2721|OPPO F29 5G"
-echo "CPH2705|OPPO F29 Pro 5G"
-echo "CPH1835|OPPO R15"
-echo "CPH1831|OPPO R15 Pro"
-echo "CPH1833|OPPO R15 Pro"
-echo "CPH1879|OPPO R17"
-echo "CPH1877|OPPO R17 Pro"
-echo "CPH1893|OPPO R17 Neo"
-echo "CPH1893RU|OPPO R17 Neo"
-echo "CPH1923|OPPO A1k"
-echo "CPH1923RU|OPPO A1k"
-echo "CPH1837|OPPO A3"
-echo "CPH2669|OPPO A3 (2024)"
-echo "CPH2639|OPPO A3 5G"
-echo "CPH2683|OPPO A3 5G"
-echo "A402OP|OPPO A3 5G (SoftBank)"
-echo "CPH1803|OPPO A3s"
-echo "CPH1853|OPPO A3s"
-echo "CPH1805|OPPO A3s"
-echo "CPH2641|OPPO A3x"
-echo "CPH2681|OPPO A3x 5G"
-echo "CPH2639|OPPO A3 Pro 5G"
-echo "CPH2665|OPPO A3 Pro 5G"
-echo "CPH1809|OPPO A5"
-echo "CPH1909|OPPO A5s"
-echo "CPH1909RU|OPPO A5s"
-echo "CPH1912|OPPO A5s"
-echo "CPH1851|OPPO AX5"
-echo "CPH1920|OPPO AX5s"
-echo "CPH1931|OPPO A5 2020"
-echo "CPH1933|OPPO A5 2020"
-echo "CPH1943|OPPO A5 2020"
-echo "CPH2735|OPPO A5 5G"
-echo "CPH2751|OPPO A5 5G"
-echo "A502OP|OPPO A5 5G (SoftBank)"
-echo "CPH2727|OPPO A5 (2025) / OPPO A5m"
-echo "CPH2773|OPPO A5i"
-echo "CPH2711|OPPO A5 Pro"
-echo "CPH2695|OPPO A5 Pro 5G"
-echo "CPH1901|OPPO A7"
-echo "CPH1905|OPPO A7"
-echo "CPH1903|OPPO AX7"
-echo "CPH1893|OPPO AX7 Pro"
-echo "CPH1893RU|OPPO AX7 Pro"
-echo "CPH1938|OPPO A9"
-echo "CPH1937|OPPO A9 2020"
-echo "CPH1941|OPPO A9 2020"
-echo "CPH1931|OPPO A11"
-echo "CPH1941|OPPO A11"
-echo "CPH1943|OPPO A11"
-echo "CPH2071|OPPO A11k"
-echo "CPH2083|OPPO A11k"
-echo "CPH2077|OPPO A12"
-echo "CPH2083|OPPO A12"
-echo "CPH2185|OPPO A15"
-echo "CPH2179|OPPO A15s"
-echo "CPH2349|OPPO A16"
-echo "CPH2351|OPPO A16"
-echo "CPH2271|OPPO A16s"
-echo "CPH2421|OPPO A16e"
-echo "CPH2477|OPPO A17"
-echo "CPH2471|OPPO A17k"
-echo "CPH2591|OPPO A18"
-echo "CPH2641|OPPO A20"
-echo "CPH2015|OPPO A31"
-echo "CPH2031|OPPO A31"
-echo "CPH2073|OPPO A31"
-echo "CPH2081|OPPO A31"
-echo "CPH2127|OPPO A33"
-echo "CPH2137|OPPO A33"
-echo "CPH2579|OPPO A38"
-echo "CPH2669|OPPO A40 / OPPO A40m"
-echo "CPH2061|OPPO A52"
-echo "CPH2069|OPPO A52"
-echo "CPH2127|OPPO A53"
-echo "CPH2131|OPPO A53"
-echo "CPH2133|OPPO A53"
-echo "CPH2137|OPPO A53"
-echo "CPH2139|OPPO A53"
-echo "CPH2135|OPPO A53s"
-echo "CPH2321|OPPO A53s 5G"
-echo "CPH2239|OPPO A54"
-echo "CPH2195|OPPO A54 5G"
-echo "CPH2303|OPPO A54 5G"
-echo "OPG02|OPPO A54 5G (KDDI)"
-echo "CPH2273|OPPO A54s"
-echo "CPH2325|OPPO A55"
-echo "CPH2309|OPPO A55s 5G"
-echo "A102OP|OPPO A55s 5G (SoftBank)"
-echo "CPH1701|OPPO A57 (2016)"
-echo "CPH2387|OPPO A57"
-echo "CPH2407|OPPO A57"
-echo "CPH2385|OPPO A57s"
-echo "CPH2577|OPPO A58"
-echo "CPH2617|OPPO A59 5G"
-echo "CPH2631|OPPO A60"
-echo "CPH3669|OPPO A60"
-echo "CPH2683|OPPO A60 5G"
-echo "CPH2067|OPPO A72"
-echo "CPH2095|OPPO A73"
-echo "CPH2099|OPPO A73"
-echo "CPH2161|OPPO A73 5G"
-echo "CPH2219|OPPO A74"
-echo "CPH2197|OPPO A74 5G"
-echo "CPH2263|OPPO A74 5G"
-echo "CPH2385|OPPO A77"
-echo "CPH2339|OPPO A77 5G"
-echo "CPH2473|OPPO A77s"
-echo "CPH2565|OPPO A78"
-echo "CPH2483|OPPO A78 5G"
-echo "CPH2495|OPPO A78 5G"
-echo "CPH2553|OPPO A79 5G"
-echo "CPH2557|OPPO A79 5G"
-echo "A303OP|OPPO A79 5G (SoftBank)"
-echo "CPH2639|OPPO A80 5G"
-echo "CPH2001|OPPO A91"
-echo "CPH2021|OPPO A91"
-echo "CPH2059|OPPO A92"
-echo "CPH2121|OPPO A93"
-echo "CPH2123|OPPO A93"
-echo "CPH2203|OPPO A94"
-echo "CPH2211|OPPO A94 5G"
-echo "CPH2365|OPPO A95"
-echo "CPH2333|OPPO A96"
-echo "CPH2529|OPPO A98 5G"
-echo "CPH1955|OPPO K3"
-echo "CPH2373|OPPO K10"
-echo "CPH2237|OPPO K10 5G"
-echo "CPH2667|OPPO K12x 5G"
-echo "CPH2729|OPPO K13 5G"
-echo "CPH2753|OPPO K13x 5G"
-echo "OPD2102A|OPPO Pad Air"
-echo "OPD2202|OPPO Pad 2"
-echo "OPD2302|OPPO Pad Neo Wi-Fi"
-echo "OPD2303|OPPO Pad Neo LTE"
-echo "OPD2406|OPPO Pad 3"
-echo "OPD2402|OPPO Pad 3 Pro"
-echo "OPD2419|OPPO Pad SE Wi-Fi"
-echo "OPD2420|OPPO Pad SE LTE"
+
+   ##models##
+CPH1859,CPH1861|Realme 1
+RMX1805,RMX1809|Realme 2
+RMX1801,RMX1803,RMX1807|Realme 2 Pro
+RMX1821,RMX1822,RMX1825|Realme 3
+RMX1827|Realme 3i
+RMX1851,RMX1853|Realme 3 Pro
+RMX1911,RMX1915,RMX1919,RMX1926,RMX1927|Realme 5
+RMX1925|Realme 5s
+RMX2030,RMX2031,RMX2032|Realme 5i
+RMX1971,RMX1973|Realme 5 Pro
+RMX2001,RMX2003|Realme 6
+RMX2061,RMX2063|Realme 6 Pro
+RMX2002|Realme 6s
+RMX2002,RMX2040,RMX2041,RMX2042|Realme 6i
+RMX2151,RMX2155|Realme 7
+RMX2111|Realme 7 5G
+RMX2170|Realme 7 Pro
+RMX2103,RMX2104,RMX2193|Realme 7i
+RMX3085|Realme 8
+RMX3081|Realme 8 Pro
+RMX3241|Realme 8 5G
+RMX3151|Realme 8i
+RMX3381|Realme 8s 5G
+RMX3521|Realme 9
+RMX3491,RMX3492,RMX3493|Realme 9i
+RMX3612|Realme 9i 5G
+RMX3388,RMX3474|Realme 9 5G
+RMX3471,RMX3472|Realme 9 Pro
+RMX3392,RMX3393|Realme 9 Pro+
+RMX3630|Realme 10
+RMX3660,RMX3661|Realme 10 Pro
+RMX3686|Realme 10 Pro+
+RMX3612|Realme 10T
+RMX3636|Realme 11
+RMX3780|Realme 11 5G
+RMX3785|Realme 11x
+RMX3771|Realme 11 Pro
+RMX3741|Realme 11 Pro+
+RMX3871|Realme 12 4G
+RMX3999|Realme 12 5G
+RMX3998|Realme 12x
+RMX3867|Realme 12+
+RMX3842|Realme 12 Pro
+RMX3840|Realme 12 Pro+
+RMX3871|Realme 13 4G
+RMX3951|Realme 13 5G
+RMX5000|Realme 13+
+RMX3990|Realme 13 Pro
+RMX3990|Realme 14 Pro Lite 5G
+RMX3921|Realme 13 Pro+
+RMX5070|Realme 14
+RMX3940,RMX3943|Realme 14x
+RMX5074,RMX5078|Realme 14T
+RMX5056,RMX5057|Realme 14 Pro
+RMX5051,RMX5054|Realme 14 Pro+
+RMX1901|Realme X
+RMX1921,RMX1922|Realme XT
+RMX1992,RMX1993|Realme X2
+RMX1931|Realme X2 Pro
+RMX2081,RMX2083|Realme X3
+RMX2085,RMX2086|Realme X3 SuperZoom
+RMX2075,RMX2076|Realme X50 Pro
+RMX3092|Realme X7
+RMX2121|Realme X7 Pro
+RMX3031|Realme X7 Max
+RMX1805|Realme C1
+RMX1941,RMX1942,RMX1943,RMX1945,RMX1946|Realme C2
+RMX2020,RMX2021,RMX2022|Realme C3
+RMX2027|Realme C3i Vietnam
+RMX2185,RMX2186|Realme C11
+RMX3231|Realme C11 2021
+RMX2184,RMX2189|Realme C12
+RMX2180,RMX2181,RMX2183|Realme C15
+RMX2195|Realme C15 Qualcomm Edition
+RMX2101|Realme C17
+RMX3061,RMX3063|Realme C20
+RMX3201,RMX3202,RMX3203|Realme C21
+RMX3261,RMX3262,RMX3263|Realme C21Y
+RMX3191,RMX3193|Realme C25
+RMX3195,RMX3197|Realme C25s
+RMX3265,RMX3269|Realme C25Y
+RMX3581,RMX3623|Realme C30
+RMX3690|Realme C30s
+RMX3501,RMX3502,RMX3503|Realme C31
+RMX3624|Realme C33
+RMX3627|Realme C33 2023
+RMX3511,RMX3512,RMX3513|Realme C35
+RMX3830|Realme C51
+RMX3765|Realme C51s
+RMX3760,RMX3762|Realme C53
+RMX3710|Realme C55
+RMX3834|Realme C60
+RMX3930,RMX3933,RMX3939|Realme C61
+RMX3939|Realme C63
+RMX3950|Realme C63 5G
+RMX3910|Realme C65
+RMX3997|Realme C65 5G
+RMX3939|Realme C65s
+RMX3890|Realme C67
+RMX3782|Realme C67 5G
+RMX5303|Realme C71
+RMX3945|Realme C73 5G
+RMX3941|Realme C75
+RMX3943,RMX3963|Realme C75 5G
+RMX5020|Realme C75x
+RMX3834|Realme Note 50
+RMX3933|Realme Note 60
+RMX3938|Realme Note 60x
+RMX1831,RMX1833|Realme U1
+RMX3870|Realme P1
+RMX3844|Realme P1 Pro 5G
+RMX5004|Realme P1 Speed 5G
+RMX3987|Realme P2 Pro 5G
+RMX5070,RMX5079|Realme P3 5G
+RMX3944|Realme P3x 5G
+RMX5032|Realme P3 Pro 5G
+RMX5030,RMX5031|Realme P3 Ultra 5G
+RMX2002|Realme Narzo Indonesia
+RMX2040|Realme Narzo 10
+RMX2020|Realme Narzo 10A
+RMX2191,RMX2193|Realme Narzo 20
+RMX2161,RMX2163|Realme Narzo 20 Pro
+RMX2050|Realme Narzo 20A
+RMX2156|Realme Narzo 30
+RMX3242|Realme Narzo 30 5G
+RMX2117|Realme Narzo 30 Pro 5G
+RMX3171|Realme Narzo 30A
+RMX3286|Realme Narzo 50
+RMX3571,RMX3572|Realme Narzo 50 5G
+RMX3395,RMX3396|Realme Narzo 50 Pro 5G
+RMX3430|Realme Narzo 50A
+RMX3516,RMX3517|Realme Narzo 50A Prime
+RMX3231,RMX3235|Realme Narzo 50i
+RMX3506|Realme Narzo 50i Prime
+RMX3761|Realme Narzo N53
+RMX3710|Realme Narzo N55
+RMX3750|Realme Narzo 60 5G
+RMX3771|Realme Narzo 60 Pro 5G
+RMX3782|Realme Narzo 60x 5G
+RMX3933|Realme NARZO N61
+RMX3939|Realme NARZO N63
+RMX3997|Realme NARZO N65 5G
+RMX3869|Realme NARZO 70 5G
+RMX3868|Realme NARZO 70 Pro 5G
+RMX3998|Realme NARZO 70x 5G
+RMX5003|Realme NARZO 70 Turbo 5G
+RMX5033|Realme NARZO 80 Pro 5G
+RMX3944|Realme NARZO 80x 5G
+RMX3945|Realme NARZO 80 Lite 5G
+RMX1971|Realme Q
+RMX2072|Realme X50 Pro Player Edition
+RMX2111,RMX2112|Realme V5 5G
+RMX2117|Realme Q2
+RMX2144|Realme X50/Realme X50m
+RMX2173|Realme Q2 Pro
+RMX2200|Realme V3
+RMX2202|Realme GT 5G
+RMX2205|Realme Q3 Pro 5G
+RMX3031|Realme GT Neo 5G
+RMX3092,RMX3093|Realme V15 5G
+RMX3115|Realme X7 Pro Ultra 5G
+RMX3121,RMX3122|Realme V11 5G
+RMX3142|Realme Q3 Pro Carnival
+RMX3161|Realme Q3 5G
+RMX3461|Realme Q3s/Realme 9 5G SE
+RMX3300,RMX3301|Realme GT2 Pro
+RMX3310,RMX3311,RMX3312|Realme GT2
+RMX3350|Realme GT Neo Flash 5G
+RMX3357|Realme GT Neo 2T
+RMX3372|Realme Q5 Pro
+RMX3478|Realme Q5
+RMX3521|Realme 9 4G
+RMX3551|Realme GT2 Master Explorer
+RMX3574|Realme Q5i
+RMX3360,RMX3363|Realme GT Master Edition
+RMX3370|Realme GT Neo2
+RMX3561|Realme GT Neo3 80W
+RMX3563|Realme GT Neo3 150W
+RMX3371|Realme GT Neo 3T
+RMX3700,RMX3701|Realme GT Neo5 SE
+RMX3706|Realme GT Neo5 150W
+RMX3708|Realme GT Neo5 240W
+RMX3709|Realme GT3 240W
+RMX3800|Realme GT6 China
+RMX3850|Realme GT Neo6 SE
+RMX3820|Realme GT5 150W
+RMX3823|Realme GT5 240W
+RMX3851|Realme GT6
+RMX3853|Realme GT 6T
+RMX3852|Realme GT Neo6
+RMX5060|Realme Neo7
+RMX3888|Realme GT5 Pro
+RMX5010,RMX5011|Realme GT7 Pro
+RMX5200,RMX5210|Realme GT8 Pro
+RMX5090|Realme GT7 Pro Racing Edition
+RMX5061|Realme GT7
+RMX6688|Realme GT7
+RMX6699|Realme GT8
+CPH2653,CPH2649|OnePlus 13
+PJZ110|OnePlus 13
+PLK110|OnePlus 15
+CPH2747,CPH2745|OnePlus 15
+CPH2769,CPH2767|OnePlus 15R
+CPH2581,CPH2573|OnePlus 12
+PJD110|OnePlus 12
+PKX110|OnePlus 13T
+CPH2723|OnePlus 13s
+CPH2645,CPH2691|OnePlus 13R
+PKG110|OnePlus Ace 5
+PLQ110|OnePlus Ace 6
+PLR110|OnePlus Ace 6T
+ONE A0001|OnePlus ONE China
+ONE A1001|OnePlus ONE China Unicom
+ONE A2001,ONE A2003|OnePlus 2
+ONE E1000,ONE E1003|OnePlus X
+ONE E1001|OnePlus X China Unicom
+ONEPLUS A3000,ONEPLUS A3003|OnePlus 3
+ONEPLUS A3010,ONEPLUS A3013|OnePlus 3T
+ONEPLUS A5000|OnePlus 5
+ONEPLUS A5010|OnePlus 5T
+ONEPLUS A6000,ONEPLUS A6003|OnePlus 6
+ONEPLUS A6010,ONEPLUS A6013|OnePlus 6T
+GM1900,GM1901,GM1903,GM1905|OnePlus 7
+GM1910,GM1911,GM1913|OnePlus 7 Pro
+GM1915|OnePlus 7 Pro North America
+GM1917|OnePlus 7 Pro T-Mobile
+GM1920|OnePlus 7 Pro 5G
+GM1925|OnePlus 7 Pro 5G Sprint
+HD1900,HD1901,HD1903|OnePlus 7T
+HD1905|OnePlus 7T North America
+HD1907|OnePlus 7T T-Mobile
+HD1910,HD1911,HD1913|OnePlus 7T Pro
+HD1925|OnePlus 7T Pro 5G T-Mobile
+IN2010,IN2011,IN2013|OnePlus 8
+IN2015|OnePlus 8 North America
+IN2017|OnePlus 8 T-Mobile
+IN2019|OnePlus 8 Visible / Verzion
+IN2020,IN2021,IN2023|OnePlus 8 Pro
+IN2025|OnePlus 8 Pro North America
+KB2000,KB2001,KB2003|OnePlus 8T
+KB2005|OnePlus 8T North America
+KB2007|OnePlus 8T+ T-Mobile
+LE2100,LE2101|OnePlus 9R
+LE2110,LE2111,LE2113|OnePlus 9
+LE2115|OnePlus 9 North America
+LE2117|OnePlus 9 T-Mobile
+LE2119|OnePlus 9 Verzion
+LE2120,LE2121,LE2123,LE2125|OnePlus 9 Pro
+LE2127|OnePlus 9 Pro T-Mobile
+MT2110,MT2111|OnePlus 9RT
+NE2210,NE2211,NE2213|OnePlus 10 Pro
+NE2215|OnePlus 10 Pro North America
+NE2217|OnePlus 10 Pro T-Mobile
+PGKM10|OnePlus Ace
+CPH2423,CPH2411|OnePlus 10R
+PGZ110|OnePlus Ace Race
+PGP110|OnePlus Ace Pro
+CPH2413,CPH2415|OnePlus 10T
+CPH2417|OnePlus 10T North America
+CPH2419|OnePlus 10T T-Mobile
+PHB110|OnePlus 11
+CPH2449,CPH2447|OnePlus 11
+CPH2451|OnePlus 11 North America
+PHK110|OnePlus Ace 2
+CPH2487|OnePlus 11R
+PHP110|OnePlus Ace 2V
+CPH2491,CPH2493|OnePlus Nord 3
+PJA110|OnePlus Ace 2 Pro
+PJE110|OnePlus Ace 3
+CPH2609,CPH2585|OnePlus 12R
+CPH2611|OnePlus 12R North America
+PJF110|OnePlus Ace 3V
+PJX110|OnePlus Ace 3 Pro
+CPH2655|OnePlus 13 North America
+CPH2647|OnePlus 13R North America
+PKR110|OnePlus Ace 5 Pro
+PLC110|OnePlus Ace 5 Ultra
+PLF110|OnePlus Ace 5 Race
+AC2001,AC2003|OnePlus Nord
+DN2101,DN2103|OnePlus Nord 2
+CPH2399,CPH2401|OnePlus Nord 2T
+CPH2661,CPH2663|OnePlus Nord 4
+CPH2709,CPH2707|OnePlus Nord 5
+EB2101,EB2103|OnePlus Nord CE
+IV2201|OnePlus Nord CE 2
+CPH2381|OnePlus Nord CE 2 Lite
+CPH2409|OnePlus Nord CE 2 Lite
+CPH2569|OnePlus Nord CE 3
+CPH2465|OnePlus Nord CE 3 Lite
+CPH2467|OnePlus Nord CE 3 Lite
+CPH2513|OnePlus Nord N30 North America
+CPH2515|OnePlus Nord N30 T-Mobile
+CPH2613|OnePlus Nord CE 4
+CPH2619|OnePlus Nord CE 4 Lite
+CPH2621|OnePlus Nord CE 4 Lite
+CPH2717|OnePlus Nord CE 5
+CPH2719|OnePlus Nord CE 5
+BE2025|OnePlus Nord N10 Metro
+BE2026|OnePlus Nord N10 North America
+BE2029|OnePlus Nord N10
+BE2028|OnePlus Nord N10 T-Mobile
+BE2011|OnePlus Nord N100 North America
+BE2012|OnePlus Nord N100 T-Mobile
+BE2013|OnePlus Nord N100
+BE2015|OnePlus Nord N100 Metro
+GN2200|OnePlus Nord N20
+CPH2459|OnePlus Nord N20
+CPH2469|OnePlus Nord 20 SE
+CPH2605|OnePlus Nord N30 SE
+DE2117|OnePlus Nord N200 North America
+DE2118|OnePlus Nord N200 T-Mobile
+CPH2389|OnePlus Nord N300
+CPH2551|OnePlus Open
+OPD2203|OnePlus Pad (2023)
+OPD2304|OnePlus Pad Go LTE
+OPD2305|OnePlus Pad Go Wi-Fi
+OPD2407|OnePlus Pad (2024)
+OPD2404|OnePlus Pad Pro
+OPD2403|OnePlus Pad 2
+OPD2413|OnePlus Pad 2 Pro
+OPD2415|OnePlus Pad 3
+CPH1871,CPH1875|OPPO Find X
+CPH2023|OPPO Find X2
+CPH2025|OPPO Find X2 Pro
+OPG01|OPPO Find X2 Pro (KDDI)
+CPH2005|OPPO Find X2 Lite
+CPH2009|OPPO Find X2 Neo
+CPH2173|OPPO Find X3 Pro
+OPG03|OPPO Find X3 Pro (KDDI)
+CPH2145|OPPO Find X3 Lite
+CPH2207|OPPO Find X3 Neo
+CPH2307|OPPO Find X5
+CPH2305|OPPO Find X5 Pro
+CPH2371|OPPO Find X5 Lite
+PHY110|OPPO Find X7 Ultra
+PKB110|OPPO Find X8
+CPH2651|OPPO Find X8
+PKC110|OPPO Find X8 Pro
+CPH2659|OPPO Find X8 Pro
+CPH2439|OPPO Find N2
+CPH2437|OPPO Find N2 Flip
+CPH2499|OPPO Find N3
+CPH2519|OPPO Find N3 Flip
+CPH2671|OPPO Find N5
+CPH2765|OPPO Find N6
+CPH1917|OPPO Reno
+CPH1921|OPPO Reno 5G
+CPH1919|OPPO Reno 10x Zoom
+CPH1983|OPPO Reno A
+CPH1979|OPPO Reno Z
+CPH1907|OPPO Reno 2
+CPH1945|OPPO Reno 2Z
+CPH1951|OPPO Reno 2Z
+CPH1951RU|OPPO Reno 2Z
+CPH1989|OPPO Reno 2F
+CPH2043|OPPO Reno 3
+A001OP|OPPO Reno 3 (SoftBank)
+CPH2035|OPPO Reno 3 Pro
+CPH2036|OPPO Reno 3 Pro
+CPH2037|OPPO Reno 3 Pro
+CPH2009|OPPO Reno 3 Pro
+CPH2013|OPPO Reno 3A
+A002OP|OPPO Reno 3A (SoftBank)
+CPH2091|OPPO Reno 4
+CPH2113|OPPO Reno 4
+CPH2089|OPPO Reno 4 Pro
+CPH2109|OPPO Reno 4 Pro
+CPH2119|OPPO Reno 4 Lite
+CPH2125|OPPO Reno 4 Lite
+CPH2209|OPPO Reno 4F
+CPH2065|OPPO Reno 4Z
+CPH2159|OPPO Reno 5
+CPH2145|OPPO Reno 5 5G
+CPH2201|OPPO Reno 5 Pro
+CPH2207|OPPO Reno 5 Pro 5G
+CPH2205|OPPO Reno 5 Lite
+CPH2199|OPPO Reno 5A
+A101OP|OPPO Reno 5A (SoftBank)
+CPH2217|OPPO Reno 5F
+CPH2211|OPPO Reno 5Z
+CPH2213|OPPO Reno 5Z
+CPH2235|OPPO Reno 6
+CPH2251|OPPO Reno 6 5G
+CPH2247|OPPO Reno 6 Pro 5G
+CPH2249|OPPO Reno 6 Pro 5G
+CPH2237|OPPO Reno 6Z
+CPH2365|OPPO Reno 6 Lite
+CPH2363|OPPO Reno 7
+CPH2371|OPPO Reno 7 5G
+CPH2293|OPPO Reno 7 Pro 5G
+CPH2353|OPPO Reno 7A
+A201OP|OPPO Reno 7A (SoftBank)
+OPG04|OPPO Reno 7A (KDDI)
+CPH2343|OPPO Reno 7Z 5G|OPPO Reno 7 Lite 5G|OPPO Reno 8 Lite 5G
+CPH2461|OPPO Reno 8
+CPH2359|OPPO Reno 8 5G
+CPH2357|OPPO Reno 8 Pro 5G
+CPH2457|OPPO Reno 8Z 5G
+CPH2481|OPPO Reno 8T
+CPH2505|OPPO Reno 8T 5G
+CPH2523|OPPO Reno 9A
+A301OP|OPPO Reno 9A (SoftBank)
+CPH2531|OPPO Reno 10 5G
+CPH2525|OPPO Reno 10 Pro 5G
+CPH2541|OPPO Reno 10 Pro 5G (Japan)
+CPH2521|OPPO Reno 10 Pro+ 5G
+CPH2599|OPPO Reno 11 5G
+CPH2607|OPPO Reno 11 Pro 5G
+CPH2603|OPPO Reno 11F 5G / OPPO Reno 11A
+CPH2625|OPPO Reno 12 5G
+CPH2629|OPPO Reno 12 Pro 5G
+CPH2637|OPPO Reno 12F 5G / OPPO Reno 12FS 5G
+CPH2689|OPPO Reno 13 5G
+CPH2697|OPPO Reno 13 Pro 5G
+CPH2701|OPPO Reno 13F
+CPH2699|OPPO Reno 13F 5G / OPPO Reno 13A
+CPH2737|OPPO Reno 14
+CPH2739|OPPO Reno 14 Pro
+CPH2743|OPPO Reno 14F 5G
+CPH1819|OPPO F7
+CPH1821|OPPO F7
+CPH1859|OPPO F7 Youth
+CPH1823|OPPO F9
+CPH1825|OPPO F9
+CPH1881|OPPO F9
+CPH1911|OPPO F11
+CPH1969|OPPO F11 Pro
+CPH1987|OPPO F11 Pro
+CPH2001|OPPO F15
+CPH2095|OPPO F17
+CPH2197|OPPO F19
+CPH2219|OPPO F19
+CPH2217|OPPO F19 Pro
+CPH2285|OPPO F19 Pro
+CPH2213|OPPO F19 Pro+ 5G
+CPH2223|OPPO F19s
+CPH2363|OPPO F21 Pro
+CPH2341|OPPO F21 Pro 5G
+CPH2343|OPPO F21 Pro 5G
+CPH2461|OPPO F21s Pro
+CPH2455|OPPO F21s Pro 5G
+CPH2481|OPPO F23
+CPH2527|OPPO F23 5G
+CPH2603|OPPO F25 Pro 5G
+CPH2637|OPPO F27 5G
+CPH2643|OPPO F27 Pro+ 5G
+CPH2721|OPPO F29 5G
+CPH2705|OPPO F29 Pro 5G
+CPH1835|OPPO R15
+CPH1831|OPPO R15 Pro
+CPH1833|OPPO R15 Pro
+CPH1879|OPPO R17
+CPH1877|OPPO R17 Pro
+CPH1893|OPPO R17 Neo
+CPH1893RU|OPPO R17 Neo
+CPH1923|OPPO A1k
+CPH1923RU|OPPO A1k
+CPH1837|OPPO A3
+CPH2669|OPPO A3 (2024)
+CPH2639|OPPO A3 5G
+CPH2683|OPPO A3 5G
+A402OP|OPPO A3 5G (SoftBank)
+CPH1803|OPPO A3s
+CPH1853|OPPO A3s
+CPH1805|OPPO A3s
+CPH2641|OPPO A3x
+CPH2681|OPPO A3x 5G
+CPH2639|OPPO A3 Pro 5G
+CPH2665|OPPO A3 Pro 5G
+CPH1809|OPPO A5
+CPH1909|OPPO A5s
+CPH1909RU|OPPO A5s
+CPH1912|OPPO A5s
+CPH1851|OPPO AX5
+CPH1920|OPPO AX5s
+CPH1931|OPPO A5 2020
+CPH1933|OPPO A5 2020
+CPH1943|OPPO A5 2020
+CPH2735|OPPO A5 5G
+CPH2751|OPPO A5 5G
+A502OP|OPPO A5 5G (SoftBank)
+CPH2727|OPPO A5 (2025) / OPPO A5m
+CPH2773|OPPO A5i
+CPH2711|OPPO A5 Pro
+CPH2695|OPPO A5 Pro 5G
+CPH1901|OPPO A7
+CPH1905|OPPO A7
+CPH1903|OPPO AX7
+CPH1893|OPPO AX7 Pro
+CPH1893RU|OPPO AX7 Pro
+CPH1938|OPPO A9
+CPH1937|OPPO A9 2020
+CPH1941|OPPO A9 2020
+CPH1931|OPPO A11
+CPH1941|OPPO A11
+CPH1943|OPPO A11
+CPH2071|OPPO A11k
+CPH2083|OPPO A11k
+CPH2077|OPPO A12
+CPH2083|OPPO A12
+CPH2185|OPPO A15
+CPH2179|OPPO A15s
+CPH2349|OPPO A16
+CPH2351|OPPO A16
+CPH2271|OPPO A16s
+CPH2421|OPPO A16e
+CPH2477|OPPO A17
+CPH2471|OPPO A17k
+CPH2591|OPPO A18
+CPH2641|OPPO A20
+CPH2015|OPPO A31
+CPH2031|OPPO A31
+CPH2073|OPPO A31
+CPH2081|OPPO A31
+CPH2127|OPPO A33
+CPH2137|OPPO A33
+CPH2579|OPPO A38
+CPH2669|OPPO A40 / OPPO A40m
+CPH2061|OPPO A52
+CPH2069|OPPO A52
+CPH2127|OPPO A53
+CPH2131|OPPO A53
+CPH2133|OPPO A53
+CPH2137|OPPO A53
+CPH2139|OPPO A53
+CPH2135|OPPO A53s
+CPH2321|OPPO A53s 5G
+CPH2239|OPPO A54
+CPH2195|OPPO A54 5G
+CPH2303|OPPO A54 5G
+OPG02|OPPO A54 5G (KDDI)
+CPH2273|OPPO A54s
+CPH2325|OPPO A55
+CPH2309|OPPO A55s 5G
+A102OP|OPPO A55s 5G (SoftBank)
+CPH1701|OPPO A57 (2016)
+CPH2387,CPH2407|OPPO A57
+CPH2385|OPPO A57s
+CPH2577|OPPO A58
+CPH2617|OPPO A59 5G
+CPH2631,CPH3669|OPPO A60
+CPH2683|OPPO A60 5G
+CPH2067|OPPO A72
+CPH2095,CPH2099|OPPO A73
+CPH2161|OPPO A73 5G
+CPH2219|OPPO A74
+CPH2197,CPH2263|OPPO A74 5G
+CPH2385|OPPO A77
+CPH2339|OPPO A77 5G
+CPH2473|OPPO A77s
+CPH2565|OPPO A78
+CPH2483,CPH2495|OPPO A78 5G
+CPH2553,CPH2557|OPPO A79 5G
+A303OP|OPPO A79 5G (SoftBank)
+CPH2639|OPPO A80 5G
+CPH2001,CPH2021|OPPO A91
+CPH2059|OPPO A92
+CPH2121,CPH2123|OPPO A93
+CPH2203|OPPO A94
+CPH2211|OPPO A94 5G
+CPH2365|OPPO A95
+CPH2333|OPPO A96
+CPH2529|OPPO A98 5G
+CPH1955|OPPO K3
+CPH2373|OPPO K10
+CPH2237|OPPO K10 5G
+CPH2667|OPPO K12x 5G
+CPH2729|OPPO K13 5G
+CPH2753|OPPO K13x 5G
+OPD2102A|OPPO Pad Air
+OPD2202|OPPO Pad 2
+OPD2302|OPPO Pad Neo Wi-Fi
+OPD2303|OPPO Pad Neo LTE
+OPD2406|OPPO Pad 3
+OPD2402|OPPO Pad 3 Pro
+OPD2419|OPPO Pad SE Wi-Fi
+OPD2420|OPPO Pad SE LTE
