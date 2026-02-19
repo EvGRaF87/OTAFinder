@@ -228,7 +228,8 @@ echo -e "🔗 ${GREEN}$modified_link${RESET}"
  
 if [[ -n "$FINAL_ZIP_URL" ]]; then
 echo -e " "
-echo -e "📥    Resolved link:"
+echo -e "📥    Resolved link: "
+echo -e " "
 echo -e "${GREEN}$resolved_zip${RESET}"
 else
   echo "❌ No download link found."
