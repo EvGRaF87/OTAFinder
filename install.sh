@@ -1,9 +1,13 @@
 #!/bin/bash
 
+set +e
+
+# 🛠 Automatically mod
 export DEBIAN_FRONTEND=noninteractive
+export TERM=xterm
 
 # --- НАСТРОЙКИ ---
-B_SH_URL="https://raw.githubusercontent.com/EvGRaF87/OTAFinder/refs/heads/main/oplus.sh"
+B_SH_URL="https://raw.githubusercontent.com/EvGRaF87/OTAFinder/refs/heads/main/ota_tool.sh"
 
 # Colors
 GREEN="\e[32m"
@@ -14,7 +18,7 @@ RESET="\e[0m"
 
 # Пути
 OTA_DIR="$HOME/OTA"
-B_SH_PATH="$OTA_DIR/oplus.sh"
+B_SH_PATH="$OTA_DIR/ota_tool.sh"
 REALME_OTA_BIN="/data/data/com.termux/files/usr/bin/realme-ota"
 
 # Вывод ошибки
