@@ -8,6 +8,7 @@ export TERM=xterm
 
 # --- НАСТРОЙКИ ---
 B_SH_URL="https://raw.githubusercontent.com/EvGRaF87/OTAFinder/refs/heads/main/ota_tool.sh"
+ARBSCAN_URL="https://raw.githubusercontent.com/EvGRaF87/OTAFinder/refs/heads/main/arbscan"
 REPO="https://raw.githubusercontent.com/EvGRaF87/OTAFinder/main"
 
 # Colors
@@ -21,6 +22,7 @@ RESET="\e[0m"
 OTA_DIR="$HOME/OTA"
 B_SH_PATH="$OTA_DIR/ota_tool.sh"
 REALME_OTA_BIN="/data/data/com.termux/files/usr/bin/realme-ota"
+ARBSCAN_BIN="/data/data/com.termux/files/usr/bin/arbscan"
 
 # Вывод ошибки
 handle_error() {
@@ -68,7 +70,7 @@ fi
 echo -e "${GREEN}Python-модули успешно установлены и настроены.${RESET}"
 
 # --- Шаг 4: Загрузка скрипта ota_tool.sh ---
-echo -e "\n${GREEN}>>> Шаг 4: Загрузка скрипта (ota_tool.sh)...${RESET}"
+echo -e "\n${GREEN}>>> Шаг 4: 📥 Загрузка скрипта (ota_tool.sh)...${RESET}"
 
 if [ ! -d "$OTA_DIR" ]; then
   mkdir -p "$OTA_DIR"
@@ -93,10 +95,45 @@ fi
 echo -e "${GREEN}Скрипт ota_tool.sh успешно загружен в $B_SH_PATH${RESET}"
 
 # --- Шаг 5: Загрузка других скриптов ---
-echo -e "\n${GREEN}>>> Шаг 5: Загрузка скриптов ...${RESET}"
+echo -e "\n${GREEN}>>> Шаг 5: 📥 Загрузка скриптов ...${RESET}"
+
+for file in oplus.sh sharelink.sh downloader.sh edl_finder.py check_arb.sh phone_name.txt phone_names.txt devices.txt; do
+    echo "➡️  $file"
+    http_code=$(curl -L -w "%{http_code}" -o "$file" "$REPO/$file")
+
+    if [[ "$http_code" != "200" ]]; then
+        echo "❌ Failed to download $file (HTTP $http_code)"
+        rm -f "$file"
+        exit 1
+    fi
+done
+
+echo "✅ All files downloaded successfully"
+chmod +x oplus.sh sharelink.sh downloader.sh edl_finder.py check_arb.sh
+
+# --- Шаг 6: Загрузка ARBSCAN ---
+echo -e "\n${GREEN}>>> Шаг 6: 📥 Загрузка ARBScan...${RESET}"
+
+curl -sL "$ARBSCAN_URL" -o "$ARBSCAN_BIN"
+
+if [ $? -ne 0 ]; then
+    handle_error "Не удалось скачать скрипт arbscan!"
+fi
+if [ ! -f "$ARBSCAN_BIN" ] || [ ! -s "$ARBSCAN_BIN" ]; then
+    handle_error "Файл arbscan не был загружен или пуст! Проверьте URL и интернет-соединение."
+fi
+echo -e "${GREEN}Скрипт arbscan успешно загружен в $ARBSCAN_BIN${RESET}"
+
+# Права доступа
+if [ -f "$ARBSCAN_BIN" ]; then
+    echo -e "${BLUE}Назначаем права на исполнение для arbscan...${RESET}"
+    chmod +x "$ARBSCAN_BIN"
+else
+    echo -e "${YELLOW}ПРЕДУПРЕЖДЕНИЕ: Не найден файл $ARBSCAN_BIN. Возможны проблемы в работе.${RESET}"
+fi
 
 # --- Шаг 7: Создание ярлыка для виджета ---
-echo -e "\n${GREEN}>>> Шаг 7: Создание ярлыка...${RESET}"
+echo -e "\n${GREEN}>>> Шаг 7: 🛠️ Создание ярлыка...${RESET}"
 SHORTCUT_DIR="$HOME/.shortcuts"
 SHORTCUT_FILE="$SHORTCUT_DIR/OTATools"
 
