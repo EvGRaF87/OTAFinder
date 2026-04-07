@@ -289,7 +289,7 @@ clear
         index=$((i + 1))
         IFS='|' read -r model region version <<< "${lines[$i]}"
 # Pôvodný model z devices.txt
-clean_model=$(echo "$model" | grep -oE '(RMX|CPH|PK[A-Z]|PJ[A-Z]|PG[A-Z]|PL[A-Z]|PH[A-Z])[0-9]{3,4}')
+clean_model=$(echo "$model" | grep -oE '(RMX|CPH|PK[A-Z]|PJ[A-Z]|PG[A-Z]|PL[A-Z]|PH[A-Z]|PM[A-Z])[0-9]{3,4}')
 
 # Device_name    
 file="phone_name.txt"
