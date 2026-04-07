@@ -83,6 +83,7 @@ CPH2691|OnePlus 13R IN
 PKG110|OnePlus Ace 5
 PLQ110|OnePlus Ace 6
 PLR110|OnePlus Ace 6T
+PMB110|OnePlus Ace 6 Ultra
 ONE A0001|OnePlus ONE China
 ONE A1001|OnePlus ONE China Unicom
 ONE A2001|OnePlus 2 China
